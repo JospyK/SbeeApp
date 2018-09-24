@@ -1,0 +1,398 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block page_title %}
+  Factures    
+{% endblock page_title %}
+
+
+{% block morecss %}
+    <link rel="stylesheet" href='{% static "bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" %}'>
+    <style type="text/css">
+      .red{
+        border: 1px solid red;
+      }
+      table{
+        color: red;
+        border: 1px solid;
+      }
+      .bgr{
+        color: white;
+        border: 1px solid white;
+        text-decoration: bold;
+        background-color: rgba(255, 0, 0, 0.6);
+      }
+
+      .bgrc{
+        background-color: rgba(255, 0, 0, 0.1);
+      }
+
+      .pr{
+        padding-right: 10px;
+      }
+
+      .pl{
+        padding-left: 30px;
+      }
+
+      .pb{
+        margin-bottom: 0px;
+      }
+
+      .value{
+        color: black;
+        font: consolas;
+      }
+
+      .textleft{
+        text-align: left;
+        padding: 10px;
+      }
+
+      .textleft h4{
+        padding: 0px;
+        margin: 0px;
+      }
+      .titl h3{
+        padding: 0px;
+        margin: 0px;
+      }
+
+      td{
+        border: 0;
+      }
+
+      .no-border{
+        border: 0;
+      }
+
+      .table table{
+        font-size: 9.5px;
+        margin: 0px;
+      }
+
+    </style>
+{% endblock morecss %}
+
+
+{% block content %}
+  
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box"  style="padding: 20px">
+            <div class="box-header">
+              <h3 class="box-title">Facture du {{ facture.periode_conso }} / {{ facture.annee_conso }}</h3>
+              <p class="pull-right">
+                {% include 'snippets/updatecart.html' with facture=facture cart=cart %}
+              </p>
+            </div>
+              <hr>
+            <!-- /.box-header -->
+            <div class="box-body">
+
+            <div class="container-fluid">
+              
+              <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">Vue Graphique</a></li>
+                <li><a data-toggle="tab" href="#detail">Details</a></li>
+              </ul>
+
+              <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                  <h3>Votre facture</h3>
+                  <hr>
+                  <div>
+                    <div class="tg-wrap text-center table table-responsive table-xs">
+                      <table border="1">
+
+                        <!-- =============== 1 ================  -->                        
+                        <tr>
+                          <td class="" colspan="" rowspan="23" > &nbsp; </td>
+                          <td class="text-center" colspan="4" rowspan="4" ><img src='{% static "auth/images/img-01.png" %}' class="img-responsive" style="width: 50px; height: 80px; margin-left: 10px;" alt="IMG"></td>
+                          <td class="titl" colspan="46" rowspan="3" >
+                            <p>
+                              <h3><b>SOCIETE BENINOISE D'ENERGIE ELECTRIQUE</b></h3><br style="margin: 0px; padding: 0px;">ETABLISSEMENT PUBLIC NATIONAL <br>
+                              01 B.P. 123 COTONOU C.C.P.N° 71-58 - ECOBANK : 050110039 - N° IFU : 3200800583113
+                            </p>
+                          </td>
+                          <td class="" colspan="" rowspan="23" > &nbsp; </td>
+                          <td class="" colspan="9" rowspan="1" >* Ceci n'est pas une facture SBEE.</td>
+                          <td class="" colspan="" rowspan="23" > &nbsp; </td>
+                        </tr>
+
+                        <!-- =============== 2 ================  -->
+                        <tr>
+                          <td class="value" colspan="9" rowspan="3" >Service réclamation: <br> 31-22-47 / 31-24-10</td>
+                        </tr>
+
+                        <!-- =============== 3 ================  -->
+                        <tr></tr>
+
+                        <!-- =============== 4 ================  -->
+                        <tr>
+                          <td class="" colspan="46" rowspan="" > <p class="pull-right"><i>Merci de payer votre facture à bonne date</i></p></td>
+                        </tr>
+
+                        <!-- =============== 5 ================  -->
+                        <tr>
+                          <td class="" colspan="50" rowspan="" > <p class="pull-left pl pb">FACTURE DE CONSOMMATION D'ELECTRICITE</p></td>
+                          <td class="bgr" colspan="9" rowspan="" >FACTURATION DE</td>
+                        </tr>
+
+                        <!-- =============== 6 ================  -->
+                        <tr>
+                          <td class="" colspan="8" rowspan="" >Relevé pour la période du </td>
+                          <td class="value " colspan="10" rowspan="" >date ici</td>
+                          <td class="" colspan="" rowspan="" >au</td>
+                          <td class="value " colspan="31" rowspan="" ><span class="pull-left">date la</span></td>
+                          <td class="value bgrc" colspan="9" rowspan="" >{{ facture.nom_abonne }}</td>
+                        </tr>
+
+                        <!-- =============== 7 ================  -->
+                        <tr>
+                          <td class="" colspan="50" rowspan="" > &nbsp;</td>
+                          <td class="" colspan="9" rowspan="" > &nbsp;</td>
+                        </tr>
+
+                        <!-- =============== 8 ================  -->
+                        <tr>
+                          <td class="" colspan="5" rowspan="2" >&nbsp;</td>
+                          <td class="bgr" colspan="28" rowspan="" >NOM ET ADRESSE DE L'ABONNE</td>
+                          <td class="" colspan="" rowspan="2" >&nbsp;</td>
+                          <td class="bgr" colspan="2" rowspan="" >ZONE</td>
+                          <td class="bgr" colspan="5" rowspan="" >NUMERO ABONNE</td>
+                          <td class="bgr" colspan="2" rowspan="" >REGT</td>
+                          <td class="" colspan="7" rowspan="2" >&nbsp;</td>
+                          <td class="bgr" colspan="2" rowspan="" >ZONE</td>
+                          <td class="bgr" colspan="5" rowspan="" >NUMERO ABONNE</td>
+                          <td class="bgr" colspan="2" rowspan="" >REGT</td>
+                        </tr>
+
+                        <!-- =============== 9 ================  -->
+                        <tr>
+                          <td class=" value bgrc" colspan="28" rowspan="" >{{ facture.nom_abonne }} <br> {{ facture.adresse }}</td>
+                          <td class=" value bgrc" colspan="2" rowspan="" ></td>
+                          <td class=" value " colspan="5" rowspan="" >{{ facture.ref }}</td>
+                          <td class=" value bgrc" colspan="2" rowspan="" >000000</td>
+                          <td class=" value bgrc" colspan="2" rowspan="" ></td>
+                          <td class=" value " colspan="5" rowspan="" >{{ facture.ref }}</td>
+                          <td class=" value bgrc" colspan="2" rowspan="" >000000</td>
+                        </tr>
+
+                        <!-- =============== 10 ================  -->
+                        <tr>
+                          <td class="" colspan="50" rowspan="" > &nbsp;</td>
+                          <td class="" colspan="9" rowspan="" > &nbsp;</td>
+                        </tr>
+
+                        <!-- =============== 11 ================  -->
+                        <tr>
+                          <td class="bgr" colspan="3" rowspan="3" >NUMERO DE POLICE</td>
+                          <td class="bgr" colspan="" rowspan="3" >PUISSANCE</td>
+                          <td class="bgr" colspan="" rowspan="3" >TARIF</td>
+                          <td class="bgr" colspan="6" rowspan="" >INDEX COMPTEUR</td>
+                          <td class="bgr" colspan="2" rowspan="3" >COEFF</td>
+                          <td class="bgr" colspan="15" rowspan="" >CONSOMMATION ELECTRIQUE (en kwh)</td>
+                          <td class="bgr" colspan="2" rowspan="3" >MONTANT CONSO</td>
+                          <td class="bgr" colspan="4" rowspan="3" >LOCATION ENTRETIEN COMPTEUR</td>
+                          <td class="bgr" colspan="2" rowspan="3" >TAXE SUR ELECTRICITE</td>
+                          <td class="bgr" colspan="3" rowspan="3" >MENSUALITE BRANCHEMENT</td>
+                          <td class="bgr" colspan="3" rowspan="3" >AUTRES LOCATIONS</td>
+                          <td class="bgr" colspan="4" rowspan="3" >MONTANT A FACTURER</td>
+                          <td class="bgr" colspan="4" rowspan="3" >VIDE A COMBLER</td>
+                          <td class="bgr" colspan="4" rowspan="3" >NUMERO DE POLICE</td>
+                          <td class="bgr" colspan="5" rowspan="3" >MONTANT A FACTURER</td>
+                        </tr>
+
+
+                        <!-- =============== 12 ================  -->
+                        <tr>
+                          <td class="bgr" colspan="3" rowspan="2" >ANCIEN</td>
+                          <td class="bgr" colspan="3" rowspan="2" >NOUVEAU</td>
+                          <td class="bgr" colspan="3" rowspan="2" >TOTAL</td>
+                          <td class="bgr" colspan="3" rowspan="2" >TRANCHE 1</td>
+                          <td class="bgr" colspan="3" rowspan="2" >TRANCHE 2</td>
+                          <td class="bgr" colspan="3" rowspan="2" >TRANCHE 3</td>
+                          <td class="bgr" colspan="3" rowspan="2" >TRANCHE 4</td>
+                        </tr>
+
+                        <!-- =============== 13 ================  -->
+                        <tr></tr>
+
+                        <!-- =============== 14 ================  -->
+                        <tr>
+                          <td class="value bgrc" colspan="3" rowspan="1" >{{ facture.panneau }}</td>
+                          <td class="value " colspan="" rowspan="1" >{{ facture.nom_abonne }}</td>
+                          <td class="value bgrc" colspan="" rowspan="1" >{{ facture.tarif }}</td>
+                          <td class="value " colspan="3" rowspan="1" >{{ facture.old_index }}</td>
+                          <td class="value bgrc" colspan="3" rowspan="1" >{{ facture.new_index }}</td>
+                          <td class="value " colspan="2" rowspan="1" >{{ facture.nom_abonne }}</td>
+                          <td class="value bgrc" colspan="3" rowspan="1" >{{ facture.conso_facture }}</td>
+                          <td class="value " colspan="3" rowspan="1" > {{ facture.conso_facture }} </td>
+                          <td class="value bgrc" colspan="3" rowspan="1" > </td>
+                          <td class="value " colspan="3" rowspan="1" > </td>
+                          <td class="value bgrc" colspan="3" rowspan="1" > </td>
+                          <td class="value " colspan="2" rowspan="1" >{{ facture.montant_conso }}</td>
+                          <td class="value bgrc" colspan="4" rowspan="1" >{{ facture.montant_lht }}</td>
+                          <td class="value " colspan="2" rowspan="1" >{{ facture.taxe_func }}</td>
+                          <td class="value bgrc" colspan="3" rowspan="1" > </td>
+                          <td class="value " colspan="3" rowspan="1" > </td>
+                          <td class="value bgrc" colspan="4" rowspan="1" >{{ facture.montant_ht }}</td>
+                          <td class="value bgrc" colspan="4" rowspan="1" > </td>
+                          <td class="value bgrc" colspan="4" rowspan="1" >{{ facture.panneau }}</td>
+                          <td class="value bgrc" colspan="5" rowspan="1" >{{ facture.montant_ht }}</td>
+                        </tr>
+
+
+                        <!-- =============== 15 ================  -->
+                        <tr></tr>
+
+                        <!-- =============== 16 ================  -->
+                        <tr></tr>
+
+                        <!-- =============== 17 ================  -->
+                        <tr>
+                          <td class="" colspan="30" rowspan="" >  &nbsp; </td>
+                          <td class="no-border" colspan="10" rowspan="" ><span class="pull-left no-border">CONTRIBUT° ELEC/RURALE :</span>  <span class="value pull-right no-border">{{ facture.contribution }}</span></td>
+                          <td class="" colspan="10" rowspan="" >  &nbsp; </td>
+                          <td class="" colspan="9" rowspan="" > &nbsp;</td>
+                        </tr>
+
+                        <!-- =============== 18 ================  -->
+                        <tr>
+                          <td class="" colspan="" rowspan="4" > </td>
+                          <td class="bgr" colspan="" rowspan="" >C</td>
+                          <td class="bgr" colspan="3" rowspan="" >TRANCHE 1</td>
+                          <td class="bgr" colspan="3" rowspan="" >TRANCHE 2</td>
+                          <td class="bgr" colspan="3" rowspan="" >TRANCHE 3</td>
+                          <td class="bgr" colspan="3" rowspan="" >TRANCHE 4</td>
+                          <td class="" colspan="2" rowspan="6" > </td>
+                          <td class="" colspan="22" rowspan="6" >
+                            <div class="red textleft">
+                              <h4 class=""><b>DATE DE PRESENTATION</b></h4>
+                              <p>La présente facture ne peut tenir lieu de quittance. <br>
+                              Le règlement du montant total qui y est porté doit etre effectué dans les 15 jours qui suivent la date de présentation.<br> Passé ce délai, la fourniture d'électricité sera coupée sans préavis pour non règlement de factures.<br>
+                              Pour le règlement se présenter au guichet de : <span class="value"> date ici</span></p>
+                            </div>
+                          </td>
+                          <td class="" colspan="3" rowspan="6" > </td>
+                          <td class="bgrc" colspan="9" rowspan="4" > <span class="pull-left">TIMBRE :</span> <span class="pull-right value pr">ok</span> <br> <span class="pull-left">TVA :</span> <span class="pull-right value pr">ok</span> <br> <span class="pull-left">NET A PAYER :</span> <span class="pull-right value pr">{{ facture.net_a_payer }}</span> </td>
+                          <td class="bgrc" colspan="9" rowspan="4" > <span class="pull-left">TIMBRE :</span> <span class="pull-right value pr">ok</span> <br> <span class="pull-left">TVA :</span> <span class="pull-right value pr">ok</span> <br> <span class="pull-left">NET A PAYER :</span> <span class="pull-right value pr">{{ facture.net_a_payer }}</span> </td>
+                        </tr>
+
+                        <!-- =============== 19 ================  -->
+                        <tr>
+                          <td class="value bgrc" colspan="" rowspan="" >{{ facture.tarif }}</td>
+                          <td class="value " colspan="3" rowspan="" >{{ facture.conso_facture }}</td>
+                          <td class="value bgrc" colspan="3" rowspan="" > </td>
+                          <td class="value " colspan="3" rowspan="" > </td>
+                          <td class="value bgrc" colspan="3" rowspan="" > </td>
+                        </tr>
+
+                        <!-- =============== 20 ================  -->
+                        <tr></tr>
+
+                        <!-- =============== 21 ================  -->
+                        <tr></tr>
+
+                        <!-- =============== 22 ================  -->
+                        <tr>
+                          <td class="" colspan="14" rowspan="2" > FACTURE A PAYER AU PLUS TARD LE <br> {{ facture.date_limitee }} </td>
+                          <td class="" colspan="19" rowspan="2" > &nbsp; </td>
+                        </tr>
+                        <!-- =============== 23 ================  -->
+                        <tr></tr>
+
+                      </table>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div id="detail" class="tab-pane fade">
+                  <dl>
+                    <dt class="col-xs-7 col-md-4">AGENCE PAYEUR            :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.agence }}</dd>
+                    <dt class="col-xs-7 col-md-4">CENTRE PAYEUR            :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.centre }}</dd>
+                    <dt class="col-xs-7 col-md-4">CODE PAYEUR              :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.ref }}</dd>
+                    <dt class="col-xs-7 col-md-4">PANNEAU                  :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.panneau }}</dd>
+                    <dt class="col-xs-7 col-md-4">ANNEE DE CONSOMMATION    :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.annee_conso }}</dd>
+                    <dt class="col-xs-7 col-md-4">PERIODE DE CONSOMMATION  :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.periode_conso }}</dd>
+                    <dt class="col-xs-7 col-md-4">ANNEE DE FACTURATION     :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.annee_factu }}</dd>
+                    <dt class="col-xs-7 col-md-4">PERIODE DE FACTURATION   :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.periode_factu }}</dd>
+                    <dt class="col-xs-7 col-md-4">MONTANT CONSOMMATION     :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.montant_conso }}</dd>
+                    <dt class="col-xs-7 col-md-4">MONTANT HORS TAXE        :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.montant_ht }}</dd>
+                    <dt class="col-xs-7 col-md-4">digits(nufmmr)           :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.nufmmr }}</dd>
+                    <dt class="col-xs-7 col-md-4">MONTANT SURTAXE          :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.montant_surtaxe }}</dd>
+                    <dt class="col-xs-7 col-md-4">CONTRIBUT° ELEC/RURALE   :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.contribution }}</dd>
+                    <dt class="col-xs-7 col-md-4">MONTANT TTC              :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.montant_ttc }}</dd>
+                    <dt class="col-xs-7 col-md-4">NET A PAYER              :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.net_a_payer }}</dd>
+                    <dt class="col-xs-7 col-md-4">TYPE PIECE CONSOM.       :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.piece_conso }}</dd>
+                    <dt class="col-xs-7 col-md-4">TAUX TVA                 :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.taux_tva }}</dd>
+                    <dt class="col-xs-7 col-md-4">MONTANT TVA              :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.montant_tva }}</dd>
+                    <dt class="col-xs-7 col-md-4">Conso facturée           :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.conso_facture }}</dd>
+                    <dt class="col-xs-7 col-md-4">NBRE JOURS CONSO         :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.jours_conso }}</dd>
+                    <dt class="col-xs-7 col-md-4">ANCIEN INDEX             :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.old_index }}</dd>
+                    <dt class="col-xs-7 col-md-4">NOUVEL INDEX             :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.new_index }}</dd>
+                    <dt class="col-xs-7 col-md-4">DATE RELEVE              :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.date_releve }}</dd>
+                    <dt class="col-xs-7 col-md-4">TARIF                    :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.tarif }}</dd>
+                    <dt class="col-xs-7 col-md-4">DATE LIMITE PAIEMENT     :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.date_limite }}</dd>
+                    <dt class="col-xs-7 col-md-4">NOM DU PAYEUR            :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.nom_abonne }}</dd>
+                    <dt class="col-xs-7 col-md-4">ADRESSE                :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.adresse }}</dd>
+                    <dt class="col-xs-7 col-md-4">MONTANT LOCATION HT      :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.montant_lht }}</dd>
+                    <dt class="col-xs-7 col-md-4">MONTANT AUTRES LOCATIONS :</dt>
+                    <dd class="col-xs-5 col-md-8">{{ facture.montant_al }}</dd>
+
+                  </dl>
+                </div>
+              </div>
+            </div>
+      
+
+
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+{% endblock content %}
+
+
+{% block morejs %}
+    <script src='{% static "bower_components/datatables.net/js/jquery.dataTables.min.js" %}'></script>
+{% endblock morejs %}

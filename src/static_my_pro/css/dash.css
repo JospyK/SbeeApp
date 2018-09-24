@@ -1,0 +1,62 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+#sidebar{
+    background-color: #444;
+    color: white;
+    display: block;
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    left: -200px;
+    top: 0px;
+    transition: all 0.2s ease-in-out;
+    overflow-y: auto;       
+}
+#sidebar.visible{
+    left: 0px;
+}
+#sidebar ul{
+    margin: 0px;
+    padding: 5px;
+}
+#sidebar ul li {
+    list-style: none;
+    border-bottom: 1px solid #333;
+    display: block;
+    padding: 10px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+#sidebar ul li:hover{
+    background-color: #222;
+}
+#sidebar ul li.last{
+    border: none;
+}        
+#sidebar ul li.first{
+    border-top: 1px solid #333;
+}
+#sidebar a{
+    text-decoration: none;
+    color: white;
+}
+#btn{
+    vertical-align: middle;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#overside{
+    color: black;
+    position: absolute;
+    height: 100%;
+    left: 200px;
+    top: 0px;
+    right: 0px;
+    transition: all 0.2s ease-in-out;
+}
+#overside.full{
+    left: 0px;
+}

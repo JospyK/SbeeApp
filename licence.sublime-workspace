@@ -1,0 +1,709 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"contac",
+				"contact_form"
+			],
+			[
+				"cont",
+				"context"
+			],
+			[
+				"con",
+				"contact_form"
+			],
+			[
+				"res",
+				"request"
+			],
+			[
+				"home",
+				"home_page"
+			],
+			[
+				"li",
+				"lien"
+			],
+			[
+				"e",
+				"error"
+			],
+			[
+				"sa",
+				"sanitized_list"
+			],
+			[
+				"foun",
+				"found_file"
+			],
+			[
+				"ini",
+				"initial_file"
+			],
+			[
+				"pa",
+				"password"
+			],
+			[
+				"sl",
+				"split"
+			],
+			[
+				"p",
+				"password"
+			],
+			[
+				"in",
+				"initial_email_list"
+			],
+			[
+				"i",
+				"if\tIf Condition"
+			],
+			[
+				"for",
+				"for\tfor …"
+			],
+			[
+				"lin",
+				"lignes"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"btn-",
+				"btn-warning"
+			],
+			[
+				"tit",
+				"titre_annonce"
+			],
+			[
+				"je",
+				"je_cherche"
+			],
+			[
+				"w",
+				"write"
+			],
+			[
+				"e1",
+				"e1_value"
+			],
+			[
+				"windw",
+				"windows"
+			],
+			[
+				"te",
+				"text-center"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"prof",
+				"Professionnel"
+			],
+			[
+				"nai",
+				"Nationalité"
+			],
+			[
+				"du",
+				"duree"
+			],
+			[
+				"cl",
+				"col-xs-6"
+			],
+			[
+				"fo",
+				"for\tAttr"
+			],
+			[
+				"moe",
+				"Mode"
+			],
+			[
+				"Preo",
+				"Professionnel"
+			],
+			[
+				"na",
+				"Nationalité"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"em",
+				"email"
+			],
+			[
+				"col",
+				"col-md-offset-1"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
+				"montant",
+				"montant"
+			],
+			[
+				"monta",
+				"montant"
+			],
+			[
+				"mon",
+				"montant"
+			],
+			[
+				"pro",
+				"prop"
+			],
+			[
+				"tex",
+				"text-center"
+			],
+			[
+				"col-md-",
+				"col-md-offset-1"
+			],
+			[
+				"form",
+				"form-group"
+			],
+			[
+				"s",
+				"style\tAttr"
+			],
+			[
+				"d",
+				"duree"
+			],
+			[
+				"a",
+				"alert"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/sbeeapp/views.py",
+			"settings":
+			{
+				"buffer_size": 1430,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/sbeeapp/forms.py",
+			"settings":
+			{
+				"buffer_size": 872,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/templates/contact/index.html",
+			"settings":
+			{
+				"buffer_size": 1361,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/sbeeapp/urls.py",
+			"settings":
+			{
+				"buffer_size": 923,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/sbeeapp/settings.py",
+			"settings":
+			{
+				"buffer_size": 3132,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: re",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/jojo/Bureau/Dev/SbeeApp",
+		"/home/jojo/Bureau/Dev/SbeeApp/lib",
+		"/home/jojo/Bureau/Dev/SbeeApp/src",
+		"/home/jojo/Bureau/Dev/SbeeApp/src/sbeeapp",
+		"/home/jojo/Bureau/Dev/SbeeApp/src/templates",
+		"/home/jojo/Bureau/Dev/SbeeApp/src/templates/contact"
+	],
+	"file_history":
+	[
+		"/home/jojo/Bureau/Dev/SbeeApp/src/templates/index.html",
+		"/home/jojo/Bureau/Dev/SbeeApp/src/templates/home_page.html",
+		"/home/jojo/Bureau/Dev/SbeeApp/src/templates/contact_page.html",
+		"/home/jojo/Bureau/html.html",
+		"/home/jojo/Bureau/django/mysite/mysite/settings.py",
+		"/home/jojo/Bureau/django/mysite/mysite/urls.py",
+		"/home/jojo/Bureau/django/mysite/polls/models.py",
+		"/home/jojo/Bureau/django/mysite/polls/admin.py",
+		"/home/jojo/Bureau/django/mysite/polls/views.py",
+		"/home/jojo/Bureau/django/mysite/polls/urls.py",
+		"/home/jojo/Bureau/automation/home/afiinity home/studio/download_images.py",
+		"/home/jojo/Bureau/automation/temp.txt",
+		"/home/jojo/Bureau/automation/grostas2.txt",
+		"/home/jojo/Bureau/automation/error.txt",
+		"/home/jojo/Bureau/automation/grostas1.txt",
+		"/home/jojo/Bureau/automation/sort.sh",
+		"/home/jojo/Bureau/automation/testMail2.py",
+		"/home/jojo/Bureau/automation/sanitized.txt",
+		"/home/jojo/Bureau/automation/found.txt",
+		"/home/jojo/Bureau/automation/test.py",
+		"/home/jojo/Bureau/automation/working.txt",
+		"/home/jojo/Bureau/automation/sanitized2.txt",
+		"/home/jojo/Bureau/automation/grostas3.txt",
+		"/home/jojo/Bureau/automation/initial_list.txt",
+		"/home/jojo/Bureau/automation/geckodriver.log",
+		"/media/jojo/Data/finishedCourses/[FreeTutorials.us] automate-the-boring-stuff-with-python/13 Web Scraping/annonce.py",
+		"/media/jojo/Data/finishedCourses/[FreeTutorials.us] automate-the-boring-stuff-with-python/13 Web Scraping/testMail.py",
+		"/var/www/html/dash/dashh/monitoring_begis/tweet.txt",
+		"/home/jojo/.cache/.fr-xl6ghq/monitoring_begis/index.php",
+		"/home/jojo/.cache/.fr-7KrPcJ/monitoring_begis/index.php",
+		"/var/www/html/dash/dashh/test.php",
+		"/var/www/html/dash/dashh/monitoring_begis/index.php",
+		"/var/www/html/dash/dashh/monitoring_begis/bakindex.php",
+		"/var/www/html/dash/dashh/jospy/tweet.txt",
+		"/var/www/html/dash/dashh/jospy/list.txt",
+		"/var/www/html/dash/dashh/jospy/test.php",
+		"/var/www/html/dash/dashh/jospy/index.php",
+		"/home/jojo/Bureau/index.html",
+		"/var/www/html/dash/dashh/index.php",
+		"/var/www/html/dash/dashh/load_webs.php",
+		"/var/www/html/dash/dashh/list.txt",
+		"/var/www/html/dash/dashh/test.php.bak",
+		"/media/jojo/UBUNTU 16_0/test.php",
+		"/media/jojo/Data/courses/[FreeTutorials.Us] rest-api-flask-and-python/03-your-first-rest-api/attached_files/templates/index.html",
+		"/home/jojo/Téléchargements/pycharm-community/bin/pycharm.sh",
+		"/home/jojo/Bureau/projects/three/resources/views/dashboard/credits/show.blade.php",
+		"/home/jojo/Bureau/projects/three/resources/views/dashboard/users/show.blade.php",
+		"/home/jojo/Bureau/projects/three/database/migrations/2014_07_02_230147_migration_cartalyst_sentinel.php",
+		"/home/jojo/Bureau/projects/three/routes/web.php",
+		"/home/jojo/Bureau/projects/three/app/Http/Controllers/CreditController.php",
+		"/home/jojo/Bureau/projects/three/database/migrations/2018_03_24_134436_create_credits_table.php",
+		"/home/jojo/Bureau/projects/voyagerapp/config/voyager.php",
+		"/media/jojo/Data/courses/[FreeTutorials.us] automate-the-boring-stuff-with-python/13 Web Scraping/annonce.py",
+		"/home/jojo/Bureau/projects/three/resources/views/partials/_nav.blade.php",
+		"/home/jojo/Bureau/projects/three/public/dist/js/pages/dashboard2.js",
+		"/home/jojo/Bureau/projects/three/config/app.php",
+		"/home/jojo/Bureau/projects/three/resources/views/visitorspages/simulation/resultpdf.blade.php",
+		"/home/jojo/Bureau/projects/three/resources/views/visitorspages/simulation/result.blade.php",
+		"/home/jojo/Bureau/projects/three/app/Http/Controllers/SimulationController.php",
+		"/home/jojo/Bureau/projects/three/resources/views/dashboard/partials/_footer.blade.php",
+		"/home/jojo/Bureau/projects/three/.env",
+		"/home/jojo/Bureau/projects/three/app/Http/Controllers/UserController.php",
+		"/home/jojo/Bureau/projects/three/resources/views/dashboard/blog/posts/index.blade.php",
+		"/home/jojo/Bureau/projects/three/public/plugins/chartjs/Chart.min.js",
+		"/home/jojo/Bureau/projects/three/resources/views/dashboard/partials/_head.blade.php",
+		"/home/jojo/Bureau/projects/three/resources/views/partials/_footer.blade.php",
+		"/home/jojo/Bureau/projects/three/resources/views/partials/_head.blade.php",
+		"/home/jojo/Bureau/projects/three/storage/framework/views/1d4307213350201d6681c1af20b22320bdb8bd00.php",
+		"/home/jojo/Bureau/projects/three/storage/framework/views/2149e65b9fa17609fa58e56368e5405e5e3f3cb7.php",
+		"/home/jojo/Bureau/projects/three/storage/framework/views/427ace2f611f9fa1e25a3dcb2bfc6b1f61c2420c.php",
+		"/home/jojo/Bureau/projects/three/storage/framework/views/51b1a38d1b3facd95617160b2d9fd4e5a17c29b1.php",
+		"/home/jojo/Bureau/projects/three/storage/framework/views/5734653795779ed222ccdbd5e9f5573dc774de91.php",
+		"/home/jojo/Bureau/projects/three/storage/framework/views/66208b879db3f2f5b82d6e1e32b0d3cb64bc7d5a.php",
+		"/home/jojo/Bureau/projects/three/storage/framework/views/b180e9904c42c512115195cfad00385cd21173e6.php",
+		"/home/jojo/Bureau/projects/three/storage/framework/views/e3a3efdf022f77e763640b2b080f9b7bc4a7e2db.php",
+		"/home/jojo/Bureau/projects/three/storage/framework/views/ea2c9b4172f1732215876e52f64d153747a35b5b.php",
+		"/home/jojo/Bureau/projects/three/resources/views/visitorspages/simulation/continue.blade.php",
+		"/home/jojo/Bureau/projects/three/resources/views/emails/activation.blade.php",
+		"/home/jojo/Bureau/projects/three/resources/views/emails/contact.blade.php",
+		"/home/jojo/Bureau/projects/three/resources/views/emails/credit.blade.php",
+		"/home/jojo/Bureau/projects/three/resources/views/emails/email.blade.php",
+		"/home/jojo/Bureau/projects/three/resources/views/emails/forgot-password.blade.php",
+		"/home/jojo/Bureau/projects/three/resources/views/emails/newsletter.blade.php",
+		"/home/jojo/Bureau/projects/three/resources/views/dashboard/blog/posts/edit.blade.php",
+		"/home/jojo/Bureau/projects/python/u.py",
+		"/home/jojo/Bureau/projects/three/app/Http/Controllers/Auth/ForgotPasswordController.php",
+		"/home/jojo/Bureau/projects/three/app/Http/Controllers/Auth/LoginController.php",
+		"/home/jojo/Bureau/projects/three/app/Http/Controllers/Auth/RegistrationController.php",
+		"/home/jojo/Bureau/projects/three/resources/views/dashboard/partials/_mainSidebar.blade.php",
+		"/home/jojo/Bureau/projects/three/resources/views/dashboard/users/index.blade.php",
+		"/home/jojo/Bureau/projects/three/resources/views/visitorspages/simulation/index.blade.php",
+		"/home/jojo/Bureau/projects/three/resources/views/visitorspages/simulation/thanks.blade.php",
+		"/home/jojo/Bureau/projects/three/resources/views/dashboard/credits/index.blade.php",
+		"/home/jojo/Bureau/projects/three/app/User.php",
+		"/home/jojo/Bureau/projects/three/vendor/cartalyst/sentinel/src/Cookies/CICookie.php",
+		"/home/jojo/Bureau/projects/three/app/Credit.php",
+		"/home/jojo/Bureau/projects/three/app/Http/Controllers/CreditStatutController.php",
+		"/home/jojo/Bureau/CCNA/notes.txt",
+		"/home/jojo/Bureau/exo",
+		"/home/jojo/Bureau/requirements",
+		"/home/jojo/Bureau/projects/larablog-master/resources/views/visitorspages/simulation/continue.blade.php.bak",
+		"/home/jojo/Bureau/projects/larablog-master/resources/views/visitorspages/simulation/continue.blade.php",
+		"/home/jojo/Bureau/projects/larablog-master/routes/web.php",
+		"/home/jojo/Bureau/projects/larablog-master/resources/views/visitorspages/simulation/result.blade.php",
+		"/home/jojo/Bureau/projects/larablog-master/resources/views/visitorspages/simulation/old.blade.php",
+		"/home/jojo/Bureau/projects/larablog-master/app/Http/Controllers/SimulationController.php",
+		"/home/jojo/Téléchargements/steps/css.css",
+		"/home/jojo/Bureau/projects/larablog-master/resources/views/visitorspages/simulation/index.blade.php",
+		"/home/jojo/Bureau/projects/larablog-master/app/Http/Controllers/CreditController.php",
+		"/media/jojo/Data/memoire/ispconfig_setup-master/README.md",
+		"/media/jojo/Data/memoire/ispconfig_setup-master/install.sh",
+		"/media/jojo/Data/memoire/ispconfig_setup-master/distros/ubuntu-16.04/install_fix.sh",
+		"/media/jojo/Data/memoire/ispconfig_setup-master/distros/ubuntu-16.04/askquestions.sh",
+		"/media/jojo/Data/memoire/ispconfig_setup-master/distros/ubuntu-16.04/preinstallcheck.sh",
+		"/media/jojo/Data/memoire/ispconfig_setup-master/distros/ubuntu-16.10/preinstallcheck.sh",
+		"/var/www/html/total/verification.html",
+		"/var/www/html/total/verification.html.bak"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 133.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"fi"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/sbeeapp/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1430,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/sbeeapp/forms.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 872,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								180,
+								180
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/templates/contact/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1361,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								603,
+								603
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/sbeeapp/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 923,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/sbeeapp/settings.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3132,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1656,
+								1656
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 390.857142857,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 47.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "licence.sublime-project",
+	"replace":
+	{
+		"height": 43.4285714286
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"mess",
+				"app/Http/Controllers/Blog/MessagesController.php"
+			],
+			[
+				"login",
+				"resources/views/authentication/login.blade.php"
+			],
+			[
+				"dash",
+				"public/dist/js/pages/dashboard2.js"
+			],
+			[
+				"char",
+				"public/plugins/chartjs/Chart.min.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 132.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

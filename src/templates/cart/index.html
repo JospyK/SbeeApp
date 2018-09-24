@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block morecss %}
+    <link rel="stylesheet" href='{% static "bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" %}'>
+{% endblock morecss %}
+
+{% block content %}
+  
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box"  style="padding: 20px">
+            <div class="box-header">
+              <h3 class="box-title">Ce tableau contient la liste des factures de votre panier</h3>
+              <b class="pull-right">Total: {{ cart.total }} FCFA</b>
+              <hr>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              {% if cart.factures.exists %}
+              <table id="example1" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                  <th>Référence</th>
+                  <th>Période</th>
+                  <th>Date Limite</th>
+                  <th>Montant</th>
+                  <th>Options</th>
+                </tr>
+                </thead>
+                <tbody>
+                  {% for facture in cart.factures.all %}
+                  <tr>
+                    <td>{{ facture.ref }}</td>
+                    <td>{{ facture.periode_factuu }} {{ facture.annee_factu }}</td>
+                    <td>{{ facture.date_limitee }}</td>
+                    <td>{{ facture.montant_ttc }} FCFA</td>
+                    <td class="btn-group col">
+                      <div class="col-xs-5"><a type="button" href="{{facture.get_url}}" class="btn btn-success">Voir</a></div>
+                      <div class="col-xs-7">{% include 'snippets/updatecart.html' with facture=facture cart=cart in_cart=True %}</div>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+                <tfoot>
+                <tr>
+                  <th>Référence</th>
+                  <th>Période</th>
+                  <th>Date Limite</th>
+                  <th>Montant</th>
+                  <th>Options</th>
+                </tr>
+                </tfoot>
+              </table>
+              <hr>
+              <div>
+                <div><a href='{% url "carts:checkout" %}' class="btn btn-success bn-lg col-xs-12 col-md-8 col-md-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">Checkout</a></div>
+              </div>
+              {% else %}
+                  <p>Le Panier est vide</p>
+              {% endif %}
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+{% endblock content %}
+
+{% block morejs %}
+    <script src='{% static "bower_components/datatables.net/js/jquery.dataTables.min.js" %}'></script>
+  <script src='{% static "bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js" %}'></script>
+  <script>
+    $(function () {
+      $('#example1').DataTable()
+    })
+  </script>
+{% endblock morejs %}

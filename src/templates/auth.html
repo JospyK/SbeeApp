@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{% block page_title %}{% endblock page_title %} | SBEE</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon"      type="image/png" href='{% static "auth/images/icons/favicon.ico" %}'/>
+  <link rel="stylesheet" type="text/css" href='{% static "auth/vendor/bootstrap/css/bootstrap.min.css" %}'>
+  <link rel="stylesheet" type="text/css" href='{% static "auth/fonts/font-awesome-4.7.0/css/font-awesome.min.css" %}'>
+  <link rel="stylesheet" type="text/css" href='{% static "auth/vendor/animate/animate.css" %}'>
+  <link rel="stylesheet" type="text/css" href='{% static "auth/vendor/css-hamburgers/hamburgers.min.css" %}'>
+  <link rel="stylesheet" type="text/css" href='{% static "auth/vendor/select2/select2.min.css" %}'>
+  <link rel="stylesheet" type="text/css" href='{% static "auth/css/util.css" %}'>
+  <link rel="stylesheet" type="text/css" href='{% static "auth/css/main.css" %}'>
+  {% block morecss %}{% endblock morecss %}
+  </style>
+</head>
+<body>
+  <div class="limiter">
+    <div class="container-login100">
+      <div class="wrap-login100">
+        <div class="login100-pic" data-tilt>
+          <div class="js-tilt">
+            <img src='{% static "auth/images/img-01.png" %}' alt="IMG">
+            <span class="login100-form-title" style="margin-top: 20px; color: #666;">
+              <span>S</span>ociété <span>B</span>éninoise d'<span>E</span>nergie <span>E</span>lectrique <hr> <span>SBEE</span>
+            </span>
+          </div>
+        </div>
+        {% block content %}{% endblock content %}
+      </div>
+    </div>
+  </div>
+  
+<!--   <style type="text/css">
+    @media (max-width: 576px) {
+      .wrap-login100 {
+        padding: 100px 15px 33px 15px;
+      }
+    }
+    @media (max-width: 768px) {
+      .wrap-login100 {
+        padding: 100px 80px 33px 80px;
+      }
+    }
+    @media (max-width: 992px) {
+      .wrap-login100 {
+        padding: 177px 90px 33px 85px;
+      }
+    }
+  </style> -->
+
+  
+  <script src='{% static "auth/vendor/jquery/jquery-3.2.1.min.js" %}'></script>
+  <script src='{% static "auth/vendor/bootstrap/js/popper.js" %}'></script>
+  <script src='{% static "auth/vendor/bootstrap/js/bootstrap.min.js" %}'></script>
+  <script src='{% static "auth/vendor/select2/select2.min.js" %}'></script>
+  <script src='{% static "auth/vendor/tilt/tilt.jquery.min.js" %}'></script>
+  <script >
+    $('.js-tilt').tilt({
+      scale: 1.0
+    })
+  </script>
+  <script src='{% static "auth/js/main.js" %}'></script>
+
+  {% block morejs %}{% endblock morejs %}
+
+</body>
+</html>

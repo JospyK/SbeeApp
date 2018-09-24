@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box"  style="padding: 20px">
+            <div class="box-header">
+				{% if title %}<h3 class='box-title my-3'>{{ title }}</h3>{% endif %}
+            </div>
+            <hr>
+            <!-- /.box-header -->
+            <div class="box-body">
+				<div class='col-12 col-md-6 mx-auto'>
+				<form method='POST' action='{% if action_url %}{{ action_url }}{% endif %}' id="form">
+					{% csrf_token %}
+				    {% if next_url %}
+				    <input type='hidden' name='next' value='{{ next_url }}' />
+				    {% endif %}
+				  {{ form.as_p }}
+				</form>
+				</div>
+            </div>
+            <div class="box-footer">
+              <button id='send' href='{% url "compte:user-update" %}' class="btn btn-danger pull-left"><i class="fa fa-pencil"></i> Modifier </button>
+              <a onclick="history.back();" class="btn btn-primary pull-right"><i class="fa fa-times"></i> Annuler </a>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+
+{% endblock %}
+
+{% block morejs %}
+    <script type="text/javascript">
+    $( "#send" ).click(function() {
+		$('#form').submit()
+	});
+
+    </script>
+{% endblock morejs %}

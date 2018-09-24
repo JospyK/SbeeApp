@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block morecss %}
+    <link rel="stylesheet" href='{% static "bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" %}'>
+{% endblock morecss %}
+
+{% block content %}
+	     
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box"  style="padding: 20px">
+            <div class="box-header">
+              <h3 class="box-title">Details du compte</h3>
+            </div>
+            <hr>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <dl>
+                <dt class="col-xs-4" >Référence Abonne :</dt>
+                <dd class="col-xs-8">{{ user.ref_abonne }}</dd>
+                <dt class="col-xs-4" >Nom :</dt>
+                <dd class="col-xs-8">{{ user.nom }}</dd>
+                <dt class="col-xs-4" >Prenoms :</dt>
+                <dd class="col-xs-8">{{ user.prenoms }}</dd>
+                <dt class="col-xs-4" >Email :</dt>
+                <dd class="col-xs-8">{{ user.email }}</dd>
+                <dt class="col-xs-4" >Télephone :</dt>
+                <dd class="col-xs-8">{% if user.telephone %}{{ user.telephone }}{% else %} Non defini
+                    {% endif %}</dd>
+              </dl>
+            </div>
+            <div class="box-footer">
+              {% if request.user.ref_abonne == user.ref_abonne %}
+                <a href='{% url "compte:user-update" %}' class="btn btn-primary pull-left"><i class="fa fa-pencil"></i> Modifier</a>
+              {% endif %}
+              {% if request.user.is_admin %}
+              <form class="" method="post" action='{% url "compte:disable_enable" pk=user.pk %}'>
+                {% csrf_token %}
+                <input type="hidden" name="user_id" value="{{user.pk}}">
+                <button class="btn btn-danger pull-right" type="submit"><i class="fa fa-lock"></i> 
+                {% if user.is_active %}
+                  Desactiver
+                  {% else %}
+                  Activate
+                {% endif %}
+                </button>
+              </form>
+              {% endif %}
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+
+  
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box"  style="padding: 20px">
+            <div class="box-header">
+              <h3 class="box-title">Factures impayées</h3>
+              <hr>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                  <th>Référence</th>
+                  <th>Période</th>
+                  <th>Date Limite</th>
+                  <th>Abonné</th>
+                  <th>Montant</th>
+                  <th>Options</th>
+                </tr>
+                </thead>
+                <tbody>
+                  {% for facture in impaye %}
+                      <tr>
+                      <td>{{ facture.ref }}</td>
+                      <td>{{ facture.periode_factuu }} {{ facture.annee_factu }}</td>
+                      <td>{{ facture.date_limitee }}</td>
+                      <td>{{ facture.nom_abonne }}</td>
+                      <td>{{ facture.montant_ttc }} FCFA</td>
+                      <td class="text-center"><a type="button" href="{{facture.get_url}}" class="btn bg-olive">Voir</a></td>
+                      </tr>
+                  {% endfor %}
+                </tbody>
+                <tfoot>
+                <tr>
+                  <th>Référence</th>
+                  <th>Période</th>
+                  <th>Date Limite</th>
+                  <th>Abonné</th>
+                  <th>Montant</th>
+                  <th>Options</th>
+                </tr>
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+    
+{% endblock content %}
+
+{% block morejs %}
+    <script src='{% static "bower_components/datatables.net/js/jquery.dataTables.min.js" %}'></script>
+  	<script src='{% static "bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js" %}'></script>
+  	<script>
+  	  $(function () {
+  	    $('#example1').DataTable()
+  	  })
+  	</script>
+{% endblock morejs %}

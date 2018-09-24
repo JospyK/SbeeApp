@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}
+  Factures    
+{% endblock page_title %}
+
+{% block morecss %}
+    <link rel="stylesheet" href='{% static "bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" %}'>
+{% endblock morecss %}
+
+{% block content %}
+	
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box"  style="padding: 20px">
+            <div class="box-header">
+              <h3 class="box-title">Ce tableau contient la liste de vos factures</h3>
+              <hr>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                  <th>Référence</th>
+                  <th>Période</th>
+                  <th>Date Limite</th>
+                  <th>Abonné</th>
+                  <th>Montant</th>
+                  <th>Options</th>
+                </tr>
+                </thead>
+                <tbody>
+                	{% for facture in facture_list %}
+	                <tr>
+                    <td>{{ facture.ref }}</td>
+                    <td>{{ facture.periode_factuu }} {{ facture.annee_factu }}</td>
+                    <td>{{ facture.date_limitee }}</td>
+                    <td>{{ facture.nom_abonne }}</td>
+                    <td>{{ facture.montant_ttc }} FCFA</td>
+	                  <td class="text-center"><a type="button" href="{{facture.get_url}}" class="btn bg-olive">Voir</a></td>
+	                </tr>
+                	{% endfor %}
+                </tbody>
+                <tfoot>
+                <tr>
+                  <th>Référence</th>
+                  <th>Période</th>
+                  <th>Date Limite</th>
+                  <th>Abonné</th>
+                  <th>Montant</th>
+                  <th>Options</th>
+                </tr>
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+    
+{% endblock content %}
+
+{% block morejs %}
+    <script src='{% static "bower_components/datatables.net/js/jquery.dataTables.min.js" %}'></script>
+	<script src='{% static "bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js" %}'></script>
+	<script>
+	  $(function () {
+	    $('#example1').DataTable()
+	  })
+	</script>
+{% endblock morejs %}

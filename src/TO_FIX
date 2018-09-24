@@ -1,0 +1,19 @@
+really save factures after load
+start thinking about graphical view of a facture
+think about after checking out
+do the paiement page
+view the admin page users
+
+
+prevoir fixtures: users, factures, fichiers, 
+
+return to login if not connected
+on login and register load , if connected return to dashboard
+
+
+start architecture 
+fail2ban full 3hours
+ssh log as root block 1hour
+
+2hours per server
+firewall 3h (To do with Mr Aarron)

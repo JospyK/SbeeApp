@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}
+  Fichiers    
+{% endblock page_title %}
+
+{% block morecss %}
+    <link rel="stylesheet" href='{% static "bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" %}'>
+{% endblock morecss %}
+
+{% block content %}
+	
+	{% if details %}
+	    <!-- Main content -->
+	    <section class="content">
+	      <div class="row">
+	        <div class="col-xs-12">
+	          <div class="box"  style="padding: 20px">
+	            <div class="box-header">
+	              <h3 class="box-title">Fichier Non chargé trouvé</h3>
+	              <a href='{% url "fichiers:list" %}' class="pull-right btn btn-primary">Charger le fichier</a>
+	              <hr>
+	            </div>
+	            <!-- /.box-header -->
+	            <div class="box-body">
+	              <dl>
+	                <dt class="col-xs-4" >Filename :</dt>
+	                <dd class="col-xs-8">{{details.filename}}</dd>
+	                <dt class="col-xs-4" >lignes :</dt>
+	                <dd class="col-xs-8">{{details.lignes}}</dd>
+	                <dt class="col-xs-4" >Montant :</dt>
+	                <dd class="col-xs-8">{{details.montant}}</dd>
+	              </dl>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </section>
+	{% endif %}
+    	
+
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box"  style="padding: 20px">
+            <div class="box-header">
+              <h3 class="box-title">Fichiers Archivés</h3>
+              <hr>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                  <th>Nom du fichier</th>
+                  <th>Montant</th>
+                  <th>Lignes</th>
+                  <th>Chargé le</th>
+                </tr>
+                </thead>
+                <tbody>
+                	{% for fichier in fichier_list %}
+	                <tr>
+                    <td>{{ fichier.nom }}</td>
+                    <td>{{ fichier.montant }}</td>
+                    <td>{{ fichier.lignes }}</td>
+                    <td>{{ fichier.timestamp }}</td>
+	                </tr>
+                	{% endfor %}
+                </tbody>
+                <tfoot>
+                <tr>
+                  <th>Nom du fichier</th>
+                  <th>Montant</th>
+                  <th>Lignes</th>
+                  <th>Chargé le</th>
+                </tr>
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+    
+{% endblock content %}
+
+{% block morejs %}
+    <script src='{% static "bower_components/datatables.net/js/jquery.dataTables.min.js" %}'></script>
+	<script src='{% static "bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js" %}'></script>
+	<script>
+	  $(function () {
+	    $('#example1').DataTable()
+	  })
+	</script>
+{% endblock morejs %}

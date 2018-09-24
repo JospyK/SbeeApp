@@ -1,0 +1,26 @@
+.cimg {
+    height: 72px;
+    width: 72px;
+    float: left;
+}
+.cname {
+    float: left;
+    margin-left: 20px;
+}
+.cname h4{
+    margin: 5px 0px;
+}
+.cname p{
+    margin: 0px;
+    color: #999;
+}
+.ccontent p{
+    clear: both;
+    margin-left: 90px;
+    line-height: 1.3;
+    margin-top: 0px;
+}
+.author{
+    text-decoration: none;
+    color: black;
+}

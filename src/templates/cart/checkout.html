@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block morecss %}
+    <link rel="stylesheet" href='{% static "bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" %}'>
+{% endblock morecss %}
+
+{% block content %}
+  {{ order.order_id }} -- {{ order.cart }} -- {{ order }}
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+            <div class="box"  style="padding: 20px">
+              <div class="box-header">
+                <h3 class="box-title">Cette page contient la liste des factures de votre panier</h3>
+                <b class="pull-right">Total: {{order.total}} FCFA</b>
+                <hr>
+              </div>
+              <!-- /.box-header -->
+              <div class="box-body">
+                <div class="col-xs-6">Total: </div><div class="col-xs-6">{{ order.cart.total }}</div>
+                <div class="col-xs-6">Order Total: </div><div class="col-xs-6">{{ order.total }}</div>
+              </div>
+              <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+          {% endif %}
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+{% endblock content %}
+
+{% block morejs %}
+    <script src='{% static "bower_components/datatables.net/js/jquery.dataTables.min.js" %}'></script>
+  <script src='{% static "bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js" %}'></script>
+  <script>
+    $(function () {
+      $('#example1').DataTable()
+    })
+  </script>
+{% endblock morejs %}

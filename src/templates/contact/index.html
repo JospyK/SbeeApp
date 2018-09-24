@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <h1 class="text-center">Hello, world Contact !</h1>
+    <form method="POST">
+      {{form}}
+      {% csrf_token %}
+      <input type="submit">
+    </form>
+{% endblock content %}

@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}
+  Factures    
+{% endblock page_title %}
+
+{% block morecss %}
+    <link rel="stylesheet" href='{% static "bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" %}'>
+{% endblock morecss %}
+
+{% block content %}
+  
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box"  style="padding: 20px">
+            <div class="box-header">
+              <h3 class="box-title">Administrateurs</h3>
+              <hr>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                  <th>Référence</th>
+                  <th>Nom</th>
+                  <th>Prénoms</th>
+                  <th>Email</th>
+                  <th>Activé</th>
+                  <th>Options</th>
+                </tr>
+                </thead>
+                <tbody>
+                  {% for user in object_list %}
+                  {% if user.is_admin == True %}
+                    <tr>
+                      <td>{{ user.ref_abonne }}</td>
+                      <td>{{ user.nom }}</td>
+                      <td>{{ user.prenoms }}</td>
+                      <td>{{ user.email }}</td>
+                      <td>{{ user.is_active }}</td>
+                      <td class="text-center"><a type="button" href="{{user.get_url}}" class="btn bg-olive">Voir</a></td>
+                    </tr>
+                  {% endif %}
+                  {% endfor %}
+                </tbody>
+                <tfoot>
+                <tr>
+                  <th>Référence</th>
+                  <th>Nom</th>
+                  <th>Prénoms</th>
+                  <th>Email</th>
+                  <th>Activé</th>
+                  <th>Options</th>
+                </tr>
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+
+  
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box"  style="padding: 20px">
+            <div class="box-header">
+              <h3 class="box-title">Abonnés</h3>
+              <hr>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                  <th>Référence</th>
+                  <th>Nom</th>
+                  <th>Prénoms</th>
+                  <th>Email</th>
+                  <th>Activé</th>
+                  <th>Options</th>
+                </tr>
+                </thead>
+                <tbody>
+                  {% for user in object_list %}
+                  {% if user.is_admin == False %}
+                    <tr>
+                      <td>{{ user.ref_abonne }}</td>
+                      <td>{{ user.nom }}</td>
+                      <td>{{ user.prenoms }}</td>
+                      <td>{{ user.email }}</td>
+                      <td>{{ user.is_active }}</td>
+                      <td class="text-center"><a type="button" href="{{user.get_url}}" class="btn bg-olive">Voir</a></td>
+                    </tr>
+                  {% endif %}
+                  {% endfor %}
+                </tbody>
+                <tfoot>
+                <tr>
+                  <th>Référence</th>
+                  <th>Nom</th>
+                  <th>Prénoms</th>
+                  <th>Email</th>
+                  <th>Activé</th>
+                  <th>Options</th>
+                </tr>
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->    
+{% endblock content %}
+
+{% block morejs %}
+    <script src='{% static "bower_components/datatables.net/js/jquery.dataTables.min.js" %}'></script>
+	<script src='{% static "bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js" %}'></script>
+	<script>
+	  $(function () {
+	    $('#example1').DataTable()
+	  })
+	</script>
+{% endblock morejs %}

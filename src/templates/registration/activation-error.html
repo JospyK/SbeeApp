@@ -1,0 +1,67 @@
+{% extends "auth.html" %}
+{% load static %}
+
+{% block page_title %}
+  Login    
+{% endblock page_title %}
+
+{% block morecss %}
+  <style type="text/css">
+        @media (min-width: 992px) {
+    .wrap-login100 { padding: 20px 130px 20px 95px; }}
+    .login100-form-title { margin: 50px 0px 20px 0px;}
+    img{ padding-left: 20px;}
+  </style>
+{% endblock morecss %}
+
+
+{% block content %}
+        <form action='' method="post" class="login100-form validate-form">
+            {% if not key %}
+              <span class="login100-form-title" style="padding: 30px 0px;">
+                Restorer votre mot de passe
+              </span>
+            {% endif %}        
+
+              {% if key %}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <b>Erreur d'activation. Reesayez s'il vous plait.</b>
+                </div>
+              {% endif%}
+
+              {% csrf_token %}
+
+              <div class="wrap-input100 validate-input" data-validate = "Un email valide est obligatoire.">
+                {{ form.email}}
+                <span class="focus-input100"></span>
+                <span class="symbol-input100">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                </span>
+              </div>
+
+            <div class="container-login100-form-btn">
+              <button class="login100-form-btn"> Renvoyer l'activation </button>
+            </div>
+
+<!--           <div class="text-center p-t-12">
+            <hr style="color: #333;">
+            <a class="txt2" href='{% url "login" %}' style="font-size: 20px;">
+              Se connecter
+              <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+            </a>
+          </div> -->
+        </form>
+{% endblock content %}
+
+
+{% block morejs %}
+<script type="text/javascript"> 
+    $(document).ready(function(){
+        $(".wrap-input100 input").addClass("input100");
+        $(".wrap-input100 input").attr("placeholder", "Email");
+    });
+</script>
+{% endblock morejs %}

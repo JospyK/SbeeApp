@@ -1,0 +1,15 @@
+<form method="POST" action='{% url "carts:update" %}'>
+	{% csrf_token %}
+	<input type="hidden" name="facture_id" value="{{facture.id}}" />
+	{% if in_cart %}
+		{% if facture in cart.factures.all %}
+	  	<button type="submit" class="btn btn-warning">Retirer la facture</button>
+	  {%endif%}	    
+	{% else %}
+		{% if facture in cart.factures.all %}
+	  	Deja dans le panier <button type="submit" class="pull-right btn btn-warning">Retirer la facture</button>
+	  {% else %}
+	  	<button type="submit" class="pull-right btn btn-success"> Ajouter la facture</button>
+	  {%endif%}	    
+	{% endif %}
+</form>

@@ -1,0 +1,41 @@
+{% load static %}
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> {% block page_title %}{% endblock page_title %} | SBEE</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    {% include 'base/css.html' %}
+    {% block morecss %}{% endblock morecss %}
+  </head>
+  
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+  {% include 'base/navbar.html' %}
+  {% include 'base/dashnav.html' %}
+  <div class="content-wrapper">
+    {% include 'base/breadcrumb.html' %}
+
+      {% if messages %}
+      <div class="row">
+        <div class="alert alert-success messages col-xs-12">
+            {% for message in messages %}
+            <span{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+                {{ message }}<br/>
+            </span>
+            {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+    {% block content %}{% endblock content %}
+  </div>
+  {% include 'base/footer.html' %}
+</div>
+    {% include 'base/js.html' %}
+    {% block morejs %}{% endblock morejs %}
+</body>
+</html>
