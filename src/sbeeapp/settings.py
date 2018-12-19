@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 EMAIL_HOST = 'smtp.mailtrap.io'
-EMAIL_HOST_USER = '81263d86d75347' 
+EMAIL_HOST_USER = '81263d86d75347'
 EMAIL_HOST_PASSWORD = '37d64306656389'
 EMAIL_PORT = 25
 EMAIL_USE_TLS = True
@@ -139,8 +139,12 @@ WSGI_APPLICATION = 'sbeeapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'sbeeapp',
+        'USER': 'sbeeappuser',
+        'PASSWORD': 'sbeeappuser',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 

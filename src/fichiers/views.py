@@ -45,8 +45,9 @@ class FichierListView(LoginRequiredMixin, ListView):
 			context={ 'details' : details, }
 		else:
 			print('Le fichier', filename, end=' n\'existe pas.\n ')
-			
+
 		context.update({'fichier_list' : Fichier.objects.all()})
+		print(Fichier.objects.all())
 		return context
 
 
@@ -111,7 +112,7 @@ def loaddt(request):
 				date_releve 	=row[22],
 				tarif 			=row[23],
 				date_limite 	=row[24],
-				nom_abonne 		=row[25],
+				nom_abonne 		="nom "+str(i),
 				adresse 		=row[26],
 				montant_lht 	=row[27],
 				montant_al 		=row[28],
@@ -140,17 +141,18 @@ def loaddt(request):
 		}
 	else:
 		print('Le fichier', filename, end=' n\'existe pas.\n ')
-		
+
 	context.update({'fichier_list' : Fichier.objects.all()})
 	print("Temps d execution : %s secondes ---" % (time.time() - start_time))
-	return HttpResponse(data[28])
-
+	#return HttpResponse(details['lignes'])
+	return HttpResponse('fichier '+filename+' chargé ( '+str(details['lignes'])+' lignes )')
 
 def reglements(request):
-	# la date d'hier 
-	date = (datetime.date.today()-datetime.timedelta(1)).strftime("%d-%m-%y")
-	factures = User.objects.all()
-	print(factures)
+	# la date d'hier
+	#date = (datetime.date.today()-datetime.timedelta(1)).strftime("%d-%m-%y")
+	date = datetime.date.today().strftime("%d-%m-%y")
+	factures = Facture.objects.filter(status='p')
+	#print(factures)
 	filename = 'reglements_{}.csv'.format(date)
 	file_ = os.path.join(FILE_ROOT, filename)
 
@@ -158,7 +160,7 @@ def reglements(request):
 		writer = csv.writer(f)
 		writer.writerows(factures)
 
-	return HttpResponse('ok')
+	return HttpResponse('fichier '+filename+' généré')
 
 
 @login_required()

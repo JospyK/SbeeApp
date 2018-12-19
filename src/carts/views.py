@@ -38,21 +38,23 @@ def update(request):
 
 @login_required()
 def checkout(request):
-	cart_obj, cart_created = Cart.objects.new_or_get(request)
-	order_obj = None
-	if cart_created or cart_obj.factures.count() == 0:
-		return redirect("cart:home")
+	print("ok")
+# 	cart_obj, cart_created = Cart.objects.new_or_get(request)
+# 	order_obj = None
+# 	if cart_created or cart_obj.factures.count() == 0:
+# 		return redirect("cart:home")
 
-	login_form = LoginForm()
-#	billing_profile, billing_guest_profile_created = BillingProfile.objects.new_or_get(request)
+# 	login_form = LoginForm()
+# #	billing_profile, billing_guest_profile_created = BillingProfile.objects.new_or_get(request)
 
-	if billing_profile is not None:
-		order_obj, order_obj_created = Order.objects.new_or_get(billing_profile, cart_obj)
+# 	if billing_profile is not None:
+# 		order_obj, order_obj_created = Order.objects.new_or_get(billing_profile, cart_obj)
 		
 
-	context = {
-		"order": order_obj,
-		"billing_profile": billing_profile,
-		"login_form": login_form,
-	}
-	return render(request, 'cart/checkout.html', context)
+# 	context = {
+# 		"order": order_obj,
+# 		"billing_profile": billing_profile,
+# 		"login_form": login_form,
+# 	}
+# 	return render(request, 'cart/checkout.html', context)
+	return htt

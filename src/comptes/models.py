@@ -38,7 +38,7 @@ class UserManager(BaseUserManager):
             ref_abonne = ref_abonne
         )
 
-        #C'est ici que je change toute la logique du truc
+        #C'est ici que je definis les trucs par defaut
 
         user.set_password(password)
         user.staff = is_staff
@@ -52,7 +52,7 @@ class UserManager(BaseUserManager):
         Creates and saves a staff user with the given email and password.
         """
         user = self.create_user(
-            email, nom, prenoms, ref_abonne, 
+            email, nom, prenoms, ref_abonne,
             password=password,
         )
         user.staff = True
@@ -64,7 +64,7 @@ class UserManager(BaseUserManager):
         Creates and saves a client user with the given email and password.
         """
         user = self.create_user(
-            email, nom, prenoms, ref_abonne, 
+            email, nom, prenoms, ref_abonne,
             password=password,
         )
         user.client = True
@@ -76,7 +76,7 @@ class UserManager(BaseUserManager):
         Creates and saves a superuser with the given email and password.
         """
         user = self.create_user(
-            email, nom, prenoms, ref_abonne, 
+            email, nom, prenoms, ref_abonne,
             password=password,
         )
         user.staff = True
@@ -96,7 +96,7 @@ class User(AbstractBaseUser):
     phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$', message="Format: '+999999999'. 15 chiffres maximum.")
     telephone = models.CharField(validators=[phone_regex], max_length=17, blank=True)
     is_active= models.BooleanField(default=True)
-    client  = models.BooleanField(default=True) 
+    client  = models.BooleanField(default=True)
     staff   = models.BooleanField(default=False) # a admin user; non super-user
     admin   = models.BooleanField(default=False) # a superuser
     # notice the absence of a "Password field", that's built in.
@@ -185,7 +185,7 @@ class EmailActivationManager(models.Manager):
 
     def email_exists(self, email):
         return self.get_queryset().filter(
-                    Q(email=email) | 
+                    Q(email=email) |
                     Q(user__email=email)
                 ).filter(
                     activated=False
@@ -237,7 +237,7 @@ class EmailActivation(models.Model):
     def send_activation(self):
         if not self.activated and not self.forced_expired:
             if self.key:
-                base_url = getattr(settings, 'BASE_URL', 'https://www.pythonsbeeapp.com')
+                base_url = getattr(settings, 'BASE_URL', 'https://www.sbeeapp.com')
                 key_path = reverse("compte:email-activate", kwargs={'key': self.key}) # use reverse
                 path = "{base}{path}".format(base=base_url, path=key_path)
                 context = {
@@ -250,13 +250,13 @@ class EmailActivation(models.Model):
                 from_email = settings.DEFAULT_FROM_EMAIL
                 recipient_list = [self.email]
                 sent_mail = send_mail(
-                            subject,
-                            txt_,
-                            from_email,
-                            recipient_list,
-                            html_message=html_,
-                            fail_silently=False,
-                    )
+                    subject,
+                    txt_,
+                    from_email,
+                    recipient_list,
+                    html_message=html_,
+                    fail_silently=False,
+                )
                 return sent_mail
         return False
 
