@@ -37,7 +37,7 @@ BASE_URL = '127.0.0.1:8000'
 DEFAULT_ACTIVATION_DAYS = 7
 
 MANAGERS = (
-    ('Justin Mitchel', "hungrypy@gmail.com"),
+    ('Jospy GOUDALO', "jk@gmail.com"),
 )
 
 ADMINS = MANAGERS
