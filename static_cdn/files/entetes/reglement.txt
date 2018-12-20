@@ -1,0 +1,20 @@
+N° CAISSE                                       4
+MATR.CAISSIER                                   5
+MODE DE REGLEMENT                               2
+N° DE REGLEMENT                                 8
+CAISSIER                                       16
+NUMERO DE PIECE                                12
+MONTANT ENCAISSE                               12
+SOLDE PIECE                                    12
+MONTANT PIECE                                  12
+MONTANT SURTAXE                                12
+CONTRIB ELEC/RURALE                            12
+MONTANT TVA                                    12
+Qte facturée                                   10
+CODE PAYEUR                                    14
+PANNEAU                                         8
+N° POLICE                                       8
+ANNEE REFER                                     4
+ANNEE FACT.                                     4
+NOM PAYEUR                                     30
+DATE ENCAISSEMENT                               8

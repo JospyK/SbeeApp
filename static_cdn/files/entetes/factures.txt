@@ -1,0 +1,29 @@
+AGENCE PAYEUR                                   2
+CENTRE PAYEUR                                   2
+CODE PAYEUR                                    14
+PANNEAU                                         8
+ANNEE DE CONSOMMATION                           4
+PERIODE DE CONSOMMATION                         2
+ANNEE DE FACTURATION                            4
+PERIODE DE FACTURATION                          2
+MONTANT CONSOMMATION                           12
+MONTANT HORS TAXE                              12
+digits(nufmmr)                                 12
+MONTANT SURTAXE                                12
+CONTRIBUT° ELEC/RURALE                          8
+MONTANT TTC                                    12
+NET A PAYER                                    12
+TYPE PIECE CONSOM.                              2
+TAUX TVA                                        5
+MONTANT TVA                                    12
+Conso facturée                                 10
+NBRE JOURS CONSO                                3
+ANCIEN INDEX                                   10
+NOUVEL INDEX                                   10
+DATE RELEVE                                     8
+TARIF                                           3
+DATE LIMITE PAIEMENT                            8
+NOM DU PAYEUR                                  30
+ADRESSE 1                                      30
+MONTANT LOCATION HT                            12
+MONTANT AUTRES LOCATIONS                       12
