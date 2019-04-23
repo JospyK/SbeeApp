@@ -56,7 +56,7 @@
               </table>
               <hr>
               <div>
-                <div><button class="btn btn-success bn-lg col-xs-12 col-md-8 col-md-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4" data-toggle="modal" data-target="#myModal">Checkout</button></div>
+                <div><button class="btn btn-success bn-lg col-xs-12 col-md-8 col-md-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4" data-toggle="modal" data-target="#myModal">Payer</button></div>
                 <!-- <div><a href='{% url "carts:checkout" %}' class="btn btn-success bn-lg col-xs-12 col-md-8 col-md-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">Checkout</a></div> -->
               </div>
               {% else %}
@@ -89,16 +89,17 @@
                               <div class="row" style="margin-top: 20px">
                                 <div class="col-md-5"><img src='{% static "dist/img/mtn.jpg" %}' class="ing-responsive" height="150px;" alt="logo Mobile Money"></div>
                                 <div class="col-md-7">
-                                  <form class="">
+                                  <form class="" method="">
                                     <div class="form-group">
                                       <label for="exampleInputAmount">Entrez votre numéro de téléphone</label><br><br>
                                       <div class="input-group">
                                         <div class="input-group-addon"><i class="fa fa-phone"></i></div>
-                                        <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                                        <input type="number" class="form-control" id="exampleInputAmount" placeholder="Numéro Mobile Money">
                                       </div>
                                     </div>
-                                    <button type="submit" class="btn btn-primary text-center">Payer</button>
+                                    <!-- <button type="submit" class="btn btn-primary text-center">Payer</button> -->
                                   </form>
+                                  <div><a href='{% url "carts:checkout" %}' class="btn btn-success bn-lg col-xs-12 col-md-8 col-md-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">Payer</a></div>
                                 </div>
                               </div>
                             </div>
@@ -106,16 +107,17 @@
                               <div class="row" style="margin-top: 20px">
                                 <div class="col-md-5"><img src='{% static "dist/img/paypal.png" %}' class="ing-responsive" height="150px;" alt="logo Paypal"></div>
                                 <div class="col-md-7">
-                                  <form class="">
+                                  <form class="" method="">
                                     <div class="form-group">
                                       <label for="exampleInputAmount">Entrez votre adresse email</label><br><br>
                                       <div class="input-group">
                                         <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
-                                        <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                                        <input type="email" class="form-control" id="exampleInputAmount" placeholder="Adresse Email Paypal">
                                       </div>
                                     </div>
-                                    <button type="submit" class="btn btn-primary text-center">Payer</button>
+                                    <!-- <button type="submit" class="btn btn-primary text-center">Payer</button> -->
                                   </form>
+                                  <div><a href='{% url "carts:checkout" %}' class="btn btn-success bn-lg col-xs-12 col-md-8 col-md-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">Payer</a></div>
                                 </div>
                               </div>
                             </div>

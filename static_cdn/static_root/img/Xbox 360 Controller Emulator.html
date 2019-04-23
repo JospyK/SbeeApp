@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)https://www.x360ce.com/ -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" class="gr__x360ce_com"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">
+
+(function() {
+	window.trackingUtils=function(k,b,d,n,o,g,c,p,r,m){var f={},i=new RegExp("/(ref=[\\w]+)/?","i"),h=function(s){return s&&encodeURIComponent(s).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;");},l=(function(){var s=document.createElement("a");s.href=(window.location!==window.parent.location)?document.referrer:document.location;return s.protocol+"//"+s.hostname+((s.port===""||s.port==="80"||s.port==="443")?"":(":"+s.port))+(s.pathname.indexOf("/")!==0?("/"+s.pathname):s.pathname);}()),q=(function(){return h(l);}()),j=function(s,u,v,t){if(typeof v==="string"&&v!==""){if(s.search===""){s.search="?"+u+"="+v;}else{if(!s.search.match(new RegExp("[?&]"+u+"="))){s.search=s.search.replace(/\?/,"?"+u+"="+v+"&");}else{if(t){s.search=s.search.replace(new RegExp(u+"=([^&]*)"),u+"="+v);}}}}return s;},e=function(u,s,t){if(typeof t==="string"&&t!==""){if(!u.match(/\?/)){u=u+"?"+s+"="+t;}else{if(!u.match(s)){u=u.replace(/\?/,"?"+s+"="+t+"&");}}}return u;},a=function(t){var s=(typeof c!=="undefined")?c:0;if(typeof t!=="undefined"){s=t;}return s;};f.addRefUrls=function(x,y,t,s){var z=new RegExp("^http://.*(amazon|endless|myhabit|amazonwireless|javari|smallparts)\\.(com|ca|co\\.jp|de|fr|co\\.uk|cn|it|es)/.*","i"),u,w,v;for(v=0;v<x.length;v++){x[v].rel="nofollow";u=String(x[v].href);if(w=u.match(z)){x[v].href=f.addTrackingParameters(x[v],y,t,s);}}};f.addRefRefUrl=function(s){return j(s,"ref-refURL",q);};f.getRefRefUrl=function(){return q;};f.getRawRefUrl=function(){return l;};f.addSignature=function(t,s,u){return j(j(t,"sig",s),"sigts",u);};f.addLinkCode=function(t,s){return j(t,"linkCode",s);};f.addTrackingId=function(t,s){return j(t,"tag",s);};f.addLinkId=function(s,t){return j(s,"linkId",t);};f.addSubtag=function(s,t){return j(s,"ascsubtag",t);};f.addCreativeAsin=function(s,t){return j(j(s,"creativeASIN",t),"adId",t);};f.addAdType=function(t,s){return j(t,"adType",s);};f.addAdMode=function(s,t){return j(s,"adMode",t);};f.addAdFormat=function(t,s){return j(t,"adFormat",s);};f.addImpressionTimestamp=function(s,t){if(typeof t==="number"){t=t.toString();}return j(s,"impressionTimestamp",t);};f.convertToRedirectedUrl=function(s,v,t){var u=document.createElement("a");u.setAttribute("href",v);if(typeof t!=="undefined"){j(u,t,h(s.getAttribute("href")),true);}else{u.setAttribute("href",v+"/"+u.getAttribute("href"));}s.setAttribute("href",u.getAttribute("href"));return s;};f.getImpressionToken=function(){return g;};f.getClickUrl=function(){return o;};f.addImpressionToken=function(t,u){var s=a(u);if(typeof g==="string"&&g!==""){j(t,"imprToken",g);if(typeof s!=="undefined"){j(t,"slotNum",s);}}return t;};f.addImpressionTokenStr=function(u,t){var s=a(t);if(typeof g==="string"&&g!==""){u=e(u,"imprToken",g);if(typeof s!=="undefined"){u=e(u,"slotNum",s);}}return u;};f.addTrackingParameters=function(y,z,x,C,v,s,w,u,t,D,B,A){return f.addSignature(f.addCreativeAsin(f.addLinkId(f.addTrackingId(f.addSubtag(f.addLinkCode(f.addRefRefUrl(f.addImpressionToken(f.addRefMarker(f.addAdType(f.addAdMode(f.addAdFormat(f.addImpressionTimestamp(y,A),B),D),t),v))),x),p),C),z),s),w,u);};f.addRefMarker=function(t,v){var u,s=false;if(typeof v==="undefined"){return t;}if(u=t.pathname.match(i)){t.pathname=t.pathname.replace(u[1],"ref="+v);}else{s=(t.pathname.charAt(t.pathname.length-1)==="/");t.pathname=t.pathname+(s?"":"/")+"ref="+v;}return t;};f.getRefMarker=function(s){var t;if(t=s.pathname.match(i)){return t[1].substr(4);}else{return undefined;}};f.makeForesterCall=function(u){var s=undefined,t;u.refUrl=(window.location!==window.parent.location)?document.referrer:document.location.href;if(typeof JSON!=="undefined"){t=JSON.stringify(u);}else{if(typeof amzn_assoc_utils!=="undefined"&&typeof amzn_assoc_utils.stringify==="function"){t=amzn_assoc_utils.stringify(u);}else{return;}}if(typeof n==="string"){s=n+"?assoc_payload="+encodeURIComponent(t);}if(typeof s!=="undefined"){(new Image()).src=s;}};f.recordImpression=function(t,s,v,u,w){v.linkCode=t;v.trackingId=s;if(m||!r){f.makeForesterCall(v);}else{f.addABPFlag(v,f.makeForesterCall);}if(typeof u==="undefined"||!u){(new Image()).src=d+"?l="+t+"&t="+s+"&o="+k+"&cb="+(new Date()).getTime()+((typeof w!=="undefined")?w:"");}};f.addAAXClickUrls=function(t){var v,u,s;if(typeof t==="undefined"||typeof o==="undefined"){return;}for(u=0;u<t.length;u++){s=String(t[u].href);if(s.indexOf(o)<0){v=o+s;t[u].href=v;}}};f.addAAXClickUrl=function(s){if(typeof s==="undefined"||s.indexOf(o)===0){return s;}return o+s;};f.updateLinks=function(t,v){var u,s;if(typeof v!=="function"){return;}for(u=0;u<t.length;u++){s=String(t[u].href);t[u].href=v(s);}};f.elementInViewPort=function(s){var t=s.getBoundingClientRect(),u=(t.top>=0&&t.left>=0&&t.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&t.right<=(window.innerWidth||document.documentElement.clientWidth));return{posX:t.left+window.pageXOffset,posY:t.top+window.pageYOffset,inViewPort:u};};f.initialViewabilityCall=function(y,t,v,x){var s=undefined,u,w={adViewability:[{above_the_fold:y,topPos:t,leftPos:v,slotNum:x}]};if(typeof JSON!=="undefined"){u=JSON.stringify(w);}else{if(typeof amzn_assoc_utils!=="undefined"&&typeof amzn_assoc_utils.stringify==="function"){u=amzn_assoc_utils.stringify(w);}else{u="";}}if(typeof n==="string"){s=n+u;}if(typeof s!=="undefined"){(new Image()).src=s+"&cb="+(new Date()).getTime();}};f.makeViewabilityCall=function(v){var s=undefined,t,u={adViewability:[{viewable:true,slotNum:v}]};if(typeof JSON!=="undefined"){t=JSON.stringify(u);}else{if(typeof amzn_assoc_utils!=="undefined"&&typeof amzn_assoc_utils.stringify==="function"){t=amzn_assoc_utils.stringify(u);}else{t="";}}if(typeof n==="string"){s=n+t;}if(typeof s!=="undefined"){(new Image()).src=s+"&cb="+(new Date()).getTime();}};f.addABPFlag=function(v,D){var x=false,w=2,u=document.body?document.body.appendChild(new Image()):new Image(),t=document.body?document.body.appendChild(new Image()):new Image(),A=false,y=false,s=Math.random()*11,C=r+"?ch=*&rn=*",B=function(F,E){if(w===0||E>1000){v.supplySideMetadata={ABPInstalled:w===0&&x};F(v);}else{setTimeout(function(){B(F,E*2);},E*2);}},z=function(){if(--w){return;}x=!A&&y;};u.style.display="none";t.style.display="none";u.onload=z;u.onerror=function(){A=true;z();};u.src=C.replace(/\*/,1).replace(/\*/,s);t.onload=z;t.onerror=function(){y=true;z();};t.src=C.replace(/\*/,2).replace(/\*/,s);B(D,250);};return f;};window.elemTracker=function(b){var a={};a.trackElements=function(d,c){var f,e;if(typeof d!=="undefined"&&d.length>0&&typeof c==="function"){window.addEventListener("scroll",function(){for(f=0;f<d.length;f++){e=b.elementInViewPort(d[f]);if(e.inViewPort){c();}}},false);}};return a;};
+	var amznAutoTaggerMaker=function(h,v,B){var D={CA:"ca",CN:"cn",IN:"in",DE:"de",FR:"fr",GB:"co.uk",JP:"co.jp",US:"com"},j={CA:[],CN:[],IN:[],DE:["javari"],FR:["javari"],GB:["javari"],JP:["javari"],US:["smallparts","amazonwireless","endless","myhabit"]},F=(function(){var O=-1,N={};N.getNextSlotNum=function(){return ++O;};return N;}()),q,o,e=Math.max(document.body.scrollHeight,document.body.offsetHeight,document.documentElement.clientHeight,document.documentElement.scrollHeight,document.documentElement.offsetHeight),m=Math.max(document.body.scrollWidth,document.body.offsetWidth,document.documentElement.clientWidth,document.documentElement.scrollWidth,document.documentElement.offsetWidth),y={totalDocWidth:m,totalDocHeight:e,logType:"onetag_pageload",pageTitle:document.title},a="w50",I="w61",H="g12",C={},b=new RegExp("%3F"),w=new Object(),x=false,l="",s="",u=0,K=0,d=0,G=new RegExp("amzn.to"),r=new RegExp(h.redirectorEndPoint),E=["kdp.amazon.com"],M=[],c=function(O){var P,N=false;for(P=0;P<E.length;P++){if(O.match(E[P])){N=true;break;}}return N;},p=function(N){return N.nextSibling&&N.nextSibling.tagName==="IMG"&&N.nextSibling.hasAttribute("src")&&(N.nextSibling.getAttribute("src").search(/ir-[a-z]{2}\.amazon-adsystem\.com/)>-1||N.nextSibling.getAttribute("src").search(/www\.assoc-amazon\.*/)>-1);},n=function(N){if(!N.href.match(r)){N.href=h.redirectorEndPoint+N.href;}},k=function(X,ad){var Y=new RegExp("/(ref=[\\w]+)/?","i"),T,ac=false,O,R,S=false,W=X.search.match(/\?tag=([^&]+)|&tag=([^&]+)|\?tag-value=([^&]+)|&tag-value=([^&]+)|\?tag_value=([^&]+)|&tag_value=([^&]+)|\?t=([^&]+)|&t=([^&]+)/),Q=X.search.match(/\?tag=|&tag=|\?tag-value=|&tag-value=|\?tag_value=|&tag_value=|\?t=|&t=/),N=X.search.match(/(linkCode|link_code|lc)=([^&]+)/i),V=v.elementInViewPort(X),ab={autoTagged:false,overwritten:false,geoRedirected:false,atf:V.inViewPort},P=F.getNextSlotNum(),U={destinationURL:X.href,slotNum:P,atfInFirstLoad:V.inViewPort,posX:V.posX,posY:V.posY,logType:"onetag_textlink"},aa=p(X),Z;ab.slotNum=P;if(X.search===""){X.search="?imprToken="+v.getImpressionToken()+"&slotNum="+P;}else{X.search=X.search.replace(/\?/,"?imprToken="+v.getImpressionToken()+"&slotNum="+P+"&");}if(h.enableAutoTagging){ab.autoTagged=true;if(W){if(h.overwrite){for(R=1;R<9;R++){if(W[R]!=undefined){X.search=X.search.replace(W[R],ad);break;}}ab.overwritten=true;ac=true;}}else{if(Q){X.search=X.search.replace(/tag=/,"tag="+ad);ac=true;}else{X.search=X.search.replace(/\?/,"?tag="+ad+"&");ac=true;}}}if(N&&typeof h.overridableLinkCodes[N[2]]!=="undefined"){S=true;}if(N&&!S){O=N[2];}else{O=ac?a:I;}if(N){U.oldLinkCode=N[2];X.search=X.search.replace(N[2],O);}else{X.search=X.search.replace(/\?/,"?linkCode="+O+"&");}if(ac){Z=ad;}else{if(typeof W!=="undefined"&&W instanceof Array&&W.length>=R+1&&typeof W[R]==="string"){Z=W[R];}else{Z="";}}if(C.shouldBeGeoRedirected()){ab.geoRedirected=true;n(X);}if(X.hasAttribute("data-amzn-asin")&&!X.search.match("creativeASIN")){X.search=X.search.replace(/\?/,"?creativeASIN="+X.getAttribute("data-amzn-asin")+"&");}M.push({pos:V,slotNum:P,linkCode:O,linkInfo:U,skipIRCall:aa,imprTag:Z});X.href=v.addAAXClickUrl(X.href);return ab;},A=function(N){if(N.href.match(b)){o=N.href.split(b);N.href=o[0]+"?"+decodeURIComponent(o[1]);}},t=function(O,N,R){var Q,P;for(Q=0;Q<O.length;Q++){for(P=0;P<N.length;P++){if(window.addEventListener){O[Q].addEventListener(N[P],R,false);}else{O[Q].attachEvent("on"+N[P],R);}}}},J=function(N,O){var P=false;t([N],["touchstart"],function(){P=false;});t([N],["touchmove"],function(){P=true;});t([N],["click","touchend"],function(Q){if(P){return;}N.setAttribute("href",O);});t([N],["auxclick","contextmenu"],function(Q){N.setAttribute("href",O);});t([N],["mouseup"],function(Q){if(Q.button===1||Q.ctrlKey){N.setAttribute("href",O);}});},L=function(){var N="";for(i=0;i<h.itemRefs.length;i++){if(typeof h.itemRefs[i].type!=="undefined"&&h.itemRefs[i].type==="ASIN"&&typeof h.itemRefs[i].sourceLink!=="undefined"&&String(h.itemRefs[i].sourceLink).match(G)!==null&&typeof h.itemRefs[i].destinationLink!=="undefined"){w[h.itemRefs[i].sourceLink]=h.itemRefs[i].destinationLink;if(l!==""){N=",";}l=l+N+h.itemRefs[i].sourceLink;u++;}}},f=function(O,N){B.trackElements([O],function(){if(typeof N!==undefined&&N.slotNum!==undefined&&(N.viewed===undefined||!N.viewed)){v.makeViewabilityCall(N.slotNum);N.viewed=true;}});},g=function(N,O){J(N,N.getAttribute("href"));N.setAttribute("href",O);},z=function(){var P,O,N;for(P=0;P<M.length;P++){O=M[P];N=O.pos;v.recordImpression(O.linkCode,O.imprTag,O.linkInfo,O.skipIRCall,O.slotNum);v.initialViewabilityCall(N.inViewPort,N.posX,N.posY,O.slotNum);}M=[];};if(h.locale!=undefined){q=h.locale;}else{q="US";}C.shouldBeGeoRedirected=function(){return h.enableGeoRedirection&&(h.region!==""&&h.region!==h.viewerCountry);};C.publisherCallBack=function(){window["amzn_assoc_client_cb_"+h.adUnitSlotNum]({type:"onload",data:{},widget:C});};C.decorateLinkElement=function(N){A(N);linkProperties=k(N,h.trackingId);f(N,linkProperties);return linkProperties;};C.tagLinks=function(ae){var ag,af,O,Z,ai,ab=[],ak=0,W,Y,ah,ad,aj,N,X,U=0,Q=0,aa=0,P=0,T=0,R=0,S,V,ac="";O=D[q];Z=j[q];ai=new RegExp("^(http|https)://(www|[\\w\\-\\.]+)?amazon\\.("+O+")/","i");if(Z){for(ak=0;ak<Z.length;ak++){W=O;if(O=="co.jp"){W="co.jp|jp";}ab[ak]=new RegExp("^(http|https)://(www\\.)?("+Z[ak]+")\\.("+W+")/","i");}}Y=ae.getElementsByTagName("a");if(!x){L();x=true;}for(ag=0;ag<Y.length;ag++){X=undefined;ah=String(Y[ag].href);if(ad=ah.match(ai)&&!c(ah)){X=C.decorateLinkElement(Y[ag]);g(Y[ag],ah);}else{if(h.isShortLinksSupported&&(aj=ah.match(G))!==null){K++;if(s!==""){ac=",";}s=s+ac+Y[ag].href;S=w[Y[ag].href];if(typeof S!=="undefined"){d++;Y[ag].setAttribute("href",S);X=C.decorateLinkElement(Y[ag]);g(Y[ag],ah);}else{if(C.shouldBeGeoRedirected()){X=C.decorateLinkElement(Y[ag]);g(Y[ag],ah);}}}else{for(N=0;N<ab.length;N++){if(ad=ah.match(ab[N])){C.decorateLinkElement(Y[ag]);g(Y[ag],ah);}}}}if(typeof X!=="undefined"){if(X.autoTagged){Q++;}if(X.overwritten){R++;}if(X.geoRedirected){aa++;}if(X.atf){P++;}else{T++;}U++;}}y.numLinks=U;y.numAutoTaggedLinks=Q;y.autoTaggingEnabled=h.enableAutoTagging;y.geoRedirectEnabled=h.enableGeoRedirection;y.numLinksATF=P;y.numLinksBTF=T;y.shortLinksInLivePool=l;y.shortLinksInPage=s;y.shortLinksInLivePoolCount=u;y.shortLinksInPageCount=K;y.shortLinksMatchCount=d;v.recordImpression(h.linkCode,h.trackingId,y);t([window],["load"],z);};return C;};
+    var spec = {
+        trackingId : "x360cecom-20",
+        region : "US",
+        overwrite : false,
+        enableAutoTagging : false,
+        linkCode : "w49",
+        overridableLinkCodes :  {   "am1": ""   , "am2": ""   , "am3": ""   , "as1": ""   , "as2": ""   , "as3": ""   , "as4": ""   , "li1": ""   , "li2": ""   , "li3": ""   , "ll1": ""   , "ll2": ""   },
+        enableGeoRedirection : true,
+        redirectorEndPoint : "https://assoc-redirect.amazon.com/g/r/",
+        adUnitSlotNum : "0",
+        itemRefs : [{"type":"ASIN","id":"B00006B84X","destUrl":{},"sourceType":{}},{"type":"ASIN","id":"B0000512IE","destUrl":{},"sourceType":{}}],
+        isShortLinksSupported : true,
+        viewerCountry : "BJ"
+    }, trackingUtils = window.trackingUtils(
+        "1",
+        "//fls-na.amazon-adsystem.com/1/associates-ads/1/OP/r/json",
+        "//ir-na.amazon-adsystem.com/e/ir",
+        "https://aax-us-east.amazon-adsystem.com/x/px/QhIUhC06CdS_rlld7FZJ5fAAAAFn6fhmkAEAAAFKAZa4xt4/", "https://aax-us-east.amazon-adsystem.com/x/c/QhIUhC06CdS_rlld7FZJ5fAAAAFn6fhmkAEAAAFKAZa4xt4/", "QtvvDhhqJ3XVXJlQpOZJFQ", undefined, undefined, undefined, true
+    );
+
+    window.amznAutoTagger = amznAutoTaggerMaker(spec, trackingUtils, window.elemTracker(trackingUtils));
+    window.amznAutoTagger.tagLinks(document);
+    window.amznAutoTagger.publisherCallBack();
+}());
+
+ //# sourceURL=dynscript-0.js</script><script src="./Xbox 360 Controller Emulator_files/f.txt"></script><title>
+	Xbox 360 Controller Emulator
+</title><meta name="Title" content="Xbox 360 Controller Emulator"><meta name="Description" content="TocaEdit Xbox 360 Controller Emulator"><meta name="Keywords" content="TocaEdit, Xbox, 360, Controller, Emulator, x360ce, x360ce.com, computer, PC, game, gaming, gamepad, joystick, steering, wheel, pedals, HOTAS"><link rel="shortcut icon" type="image/x-icon" href="https://www.x360ce.com/favicon.ico">
+
+    <style type="text/css">
+        body { margin: 0; background-color: #004a6f; }
+
+        table { margin: auto; border: 0; padding: 0; border-collapse: collapse; border-spacing: 0; }
+
+        td { font-family: Calibri, 'Trebuchet MS', Arial; font-size: 14px; border: 0; vertical-align: top; padding: 0; }
+
+        p { line-height: 1.2; }
+
+        .title { font-size: 18px; }
+
+        img { vertical-align: middle; }
+
+        a.MenuLink { text-decoration: none; outline: none; color: #ffffff; border-radius: 4px; }
+                    a:hover.MenuLink { background-color: #6ebcfb; }
+
+        a { text-decoration: none; outline: none; color: #ffffff; border-radius: 4px; }
+
+            a:hover.GitHub { background-color: #6ebcfb; }
+                a:hover.ImageLink { background-color: #ffffff; }
+
+            a.Blue { color: #003399; }
+            a:hover.Blue { color: #003399; background-color: transparent; }
+
+        .GitHub { background-color: #53a1f6; padding-left: 8px; padding-right: 8px; padding-top: 1px; padding-bottom: 2px; display: inline-block; }
+
+        .GitHubBlack { display: block; border-radius: 0 0 0 0; background-color: #000000; padding-left: 3px; padding-right: 3px; padding-top: 1px; padding-bottom: 2px; color: #ffffff; font-size: 6pt; }
+
+        .Controllers td, p { color: #84e68c; }
+
+        .Games td, p { color: #ff7373; }
+
+        .Description td, p { color: #111111; }
+
+        .ControllerList { width: 100%; margin-top: 8px; background-color: #ffffff; border-radius: 8px; }
+            .ControllerList p { margin: 6px 6px 0 0; font-size: 11px; }
+            .ControllerList a { display: inline-block; background-color: #ffffff; }
+            .ControllerList img { border-radius: 10px; }
+            .ControllerList td { text-align: center; }
+
+        .ControllerImg { width: 114px; vertical-align: middle; }
+            .ControllerImg a { width: 112px; border-radius: 10px; }
+
+        .Amazon { margin: 1px 4px 1px 0 !important; text-align: left; }
+            .Amazon a { width: 86px; border: 1px solid #ffffff; }
+                .Amazon a:hover { border: 1px solid #eeeeee; border-radius: 6px; /* For browsers that do not support gradients */ /*background: #ffffff;*/ /* For Safari 5.1 to 6.0 */ /*background: -webkit-linear-gradient(left, #f2f2f2, #ffffff, #f2f2f2);*/ /* For Opera 11.1 to 12.0 */ /*background: -o-linear-gradient(left, #f2f2f2, #ffffff, #f2f2f2);*/ /* For Fx 3.6 to 15 */ /*background: -moz-linear-gradient(left, #f2f2f2, #ffffff, #f2f2f2);*/ /* Standard syntax */ /*background: linear-gradient(to left, #f2f2f2, #ffffff, #f2f2f2);*/ }
+            .Amazon img { margin-left: 0px; border-radius: 6px; }
+
+        .Manufacturer { border-radius: 4px; background-color: #bfbfbf; color: #aaaaaa; display: block; height: 17px; }
+            .Manufacturer a { width: 100%; background-color: transparent; vertical-align: top; text-align: center; height: 17px; }
+            .Manufacturer a:hover { background-color: #aaaaaa; }
+        .Manufacturer span { display: inline-block; margin: 2px 0 2px 0; height: 17px; }
+
+        .Features { text-align: left; margin: 0 0 -1px 6px !important; line-height: 1.2; }
+    </style>
+
+    <script src="./Xbox 360 Controller Emulator_files/ca-pub-5837808446320006.js"></script><script async="async" src="./Xbox 360 Controller Emulator_files/f(1).txt"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5837808446320006",
+            enable_page_level_ads: true
+        });
+    </script>
+
+<link rel="preload" href="./Xbox 360 Controller Emulator_files/f(2).txt" as="script"><script type="text/javascript" src="./Xbox 360 Controller Emulator_files/f(2).txt"></script><link rel="preload" href="./Xbox 360 Controller Emulator_files/f(3).txt" as="script"><script type="text/javascript" src="./Xbox 360 Controller Emulator_files/f(3).txt"></script><link rel="preload" href="https://pagead2.googlesyndication.com/pagead/js/r20181205/r20180604/show_ads_impl.js" as="script"></head>
+<body data-gr-c-s-loaded="true">
+
+    <div style="position: relative;">
+
+	<img src="./Xbox 360 Controller Emulator_files/Transparent.png" style="position: absolute; top: 0; left: 0; z-index: -2; width: 100%; height: 100%; background-image: radial-gradient(#008ab4 0%, #004a6f 100%);">
+        <img src="./Xbox 360 Controller Emulator_files/Background_1.png" style="position: absolute; top: 0; left: 0; z-index: -1;">
+        <img src="./Xbox 360 Controller Emulator_files/Background_2.png" style="position: absolute; top: 0; right: 0; z-index: -1">
+        <img src="./Xbox 360 Controller Emulator_files/Background_3.png" style="position: absolute; bottom: 0; left: 0; z-index: -1">
+        <img src="./Xbox 360 Controller Emulator_files/Background_4.png" style="position: absolute; bottom: 0; right: 0; z-index: -1">
+
+        <form method="post" action="https://www.x360ce.com/" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMjExMDQ2MzgwNg9kFgICAw9kFgQCAQ9kFgJmDxQrAAIPFgQeC18hRGF0YUJvdW5kZx4LXyFJdGVtQ291bnQCFGRkFgJmD2QWAgIBD2QWKGYPZBYCZg9kFgJmDxUCBjgwLDk2MxJHcmFuZCBUaGVmdCBBdXRvIFZkAgEPZBYCZg9kFgJmDxUCBjc2LDY0OChOQVJVVE8gU0hJUFBVREVOOiBVbHRpbWF0ZSBOaW5qYSBTVE9STSA0ZAICD2QWAmYPZBYCZg8VAgY3MSwzOTIYTmVlZCBmb3IgU3BlZWTihKIgUml2YWxzZAIDD2QWAmYPZBYCZg8VAgYzNiw0MjkRTkFSVVRPIFNUT1JNIDMgRkJkAgQPZBYCZg9kFgJmDxUCBjMzLDU1OSFEQVJLIFNPVUxTIFBSRVBBUkUgVE8gRElFIEVESVRJT05kAgUPZBYCZg9kFgJmDxUCBjI4LDg3MA1Sb2NrZXQgTGVhZ3VlZAIGD2QWAmYPZBYCZg8VAgYyNiw3MzYXTkFSVVRPIFNUT1JNIFJFVk9MVVRJT05kAgcPZBYCZg9kFgJmDxUCBjI1LDg3MBlOZWVkIGZvciBTcGVlZOKEoiBQYXliYWNrZAIID2QWAmYPZBYCZg8VAgYyNSwzODMHRklGQSAxOGQCCQ9kFgJmD2QWAmYPFQIGMjMsMDY0FEVBIFNwb3J0c+KEoiBGSUZBIDE1ZAIKD2QWAmYPZBYCZg8VAgYyMiw5OTkNVGhlIFdpdGNoZXIgM2QCCw9kFgJmD2QWAmYPFQIGMTcsMjM5ElN0cmVldEZpZ2h0ZXJWLmV4ZWQCDA9kFgJmD2QWAmYPFQIGMTYsOTQwB0ZJRkEgMTRkAg0PZBYCZg9kFgJmDxUCBjE2LDg0MxFEQVJLIFNPVUxT4oSiIElJSWQCDg9kFgJmD2QWAmYPFQIGMTMsOTYwB0ZJRkEgMTdkAg8PZBYCZg9kFgJmDxUCBjEzLDE4OQ5EQVJLIFNPVUxTIOKFoWQCEA9kFgJmD2QWAmYPFQIGMTEsMjk0IU1pZGRsZS1lYXJ0aDogU2hhZG93IG9mIE1vcmRvcuKEomQCEQ9kFgJmD2QWAmYPFQIGMTEsMjg1LERBUksgU09VTFMgKFRNKSBJSTogU2Nob2xhciBvZiB0aGUgRmlyc3QgU2luZAISD2QWAmYPZBYCZg8VAgYxMCw4NTILVG9tYiBSYWlkZXJkAhMPZBYCZg9kFgJmDxUCBjEwLDY5MAhCbHVyLmV4ZWQCAw9kFgJmDxQrAAIPFgQfAGcfAQIUZGQWAmYPZBYCAgEPZBYoZg9kFgJmD2QWAmYPFQIHNDkzLDk3NxRHZW5lcmljIFVTQiBKb3lzdGlja2QCAQ9kFgJmD2QWAmYPFQIHMjIxLDA1NRFUd2luIFVTQiBKb3lzdGlja2QCAg9kFgJmD2QWAmYPFQIGNzEsMjA3FFhCT1ggMzYwIEZvciBXaW5kb3dzZAIDD2QWAmYPZBYCZg8VAgY2OSw0MDAMVVNCIEpPWVNUSUNLZAIED2QWAmYPZBYCZg8VAgY2NSw1NjILVVNCIEdBTUVQQURkAgUPZBYCZg9kFgJmDxUCBjUxLDE1NRtVU0IgVmlicmF0aW9uIEpveXN0aWNrIChCTSlkAgYPZBYCZg9kFgJmDxUCBjQwLDk5NRNXaXJlbGVzcyBDb250cm9sbGVyZAIHD2QWAmYPZBYCZg8VAgYzNCw3NzYUTG9naXRlY2ggRHVhbCBBY3Rpb25kAggPZBYCZg9kFgJmDxUCBjMzLDQ3OBpQTEFZU1RBVElPTihSKTMgQ29udHJvbGxlcmQCCQ9kFgJmD2QWAmYPFQIGMjYsMDI0EUJsdWV0b290aCBHYW1lcGFkZAIKD2QWAmYPZBYCZg8VAgYyNSw4OTcmWGJveCAzNjAgV2lyZWxlc3MgUmVjZWl2ZXIgZm9yIFdpbmRvd3NkAgsPZBYCZg9kFgJmDxUCBjIyLDE2MxhMb2dpdGVjaCBSdW1ibGVQYWQgMiBVU0JkAgwPZBYCZg9kFgJmDxUCBjE5LDA0MxRYQk9YIE9uZSBGb3IgV2luZG93c2QCDQ9kFgJmD2QWAmYPFQIGMTYsOTY5HUxvZ2l0ZWNoIENvcmRsZXNzIFJ1bWJsZVBhZCAyZAIOD2QWAmYPZBYCZg8VAgYxNiwyODMSUEMgR2FtZSBDb250cm9sbGVyZAIPD2QWAmYPZBYCZg8VAgYxMiw1MTkNUFMoUikgR2FtZXBhZGQCEA9kFgJmD2QWAmYPFQIGMTIsMDk2C3ZKb3kgRGV2aWNlZAIRD2QWAmYPZBYCZg8VAgYxMCwyNTQVVkpveSBWaXJ0dWFsIEpveXN0aWNrZAISD2QWAmYPZBYCZg8VAgU5LDEyMBxUaHJ1c3RtYXN0ZXIgZHVhbCBhbmFsb2cgMy4yZAITD2QWAmYPZBYCZg8VAgU4LDMxNQxHYW1lcGFkIGYzMTBkGAIFJkNvbnRyb2xsZXJzQ29udHJvbCRDb250cm9sbGVyc0xpc3RWaWV3DxQrAA5kZGRkZGRkPCsAFAACFGRkZGYC/////w9kBRpHYW1lc0NvbnRyb2wkR2FtZXNMaXN0Vmlldw8UKwAOZGRkZGRkZDwrABQAAhRkZGRmAv////8PZMvNLaeAHzCwUTvgqylkbaLOKJJ9">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334">
+</div>
+
+             <table style="margin: auto; position: relative; z-index: 2;">
+                <tbody><tr>
+                    <td style="padding: 4px; width: 1058px">
+
+                        <table style="width: 1054px;">
+                            <tbody><tr>
+                                <td colspan="2" style="background-color: #2674ec; padding: 10px; text-align: center; border-radius: 14px;">
+
+                                    <p style="font-size: 24px; vertical-align: middle; margin-top: 0; margin-bottom: 12px; color: #80ceff;">TocaEdit Xbox 360 Controller Emulator 3.2.9.81 (2015-10-04)</p>
+
+                                    <table style="border-collapse: separate; border-spacing: 4px;">
+                                        <tbody><tr>
+                                            <td><a target="_blank" class="GitHub" href="https://github.com/x360ce/x360ce">Source (GitHub.com)</a></td>
+                                            <td><a target="_blank" class="GitHub" href="https://github.com/x360ce/x360ce/blob/master/Wiki/CompatibilityList.md">Supported Games</a></td>
+                                            <td><a target="_blank" class="GitHub" href="https://github.com/x360ce/x360ce/issues">Issues</a></td>
+                                            <td><a target="_blank" class="GitHub" href="http://ngemu.com/forums/x360ce.140">Forum</a></td>
+                                            <td><a class="GitHub" href="https://github.com/x360ce/x360ce/releases/download/3.2.9.82/x360ce.zip">Download • for 32-bit games</a></td>
+                                            <td><a class="GitHub" href="https://github.com/x360ce/x360ce/releases/download/3.2.9.82/x360ce_x64.zip">Download • for 64-bit games</a></td>
+                                            <td><a target="_blank" class="GitHub" href="https://github.com/x360ce/x360ce/blob/master/Wiki/BetaTesting.md">Beta Testing</a></td>
+                                        </tr>
+                                    </tbody></table>
+
+                                    <table style="margin-left: auto; margin-right: auto; margin-top: 10px;">
+                                        <tbody><tr>
+                                            <td style="vertical-align: middle; padding-right: 10px;"><img src="./Xbox 360 Controller Emulator_files/x360ce_Logo_Small.png" style="width: 120px; height: 40px;"></td>
+                                            <td style="vertical-align: middle; color: #80ceff; text-align: left;">“Xbox 360 Controller Emulator” allows your controller ( gamepad, joystick, wheel, etc. ) to function as an Xbox 360 controller.<br>
+                                                For example, it lets you play games such as “Grand Theft Auto”, “Mafia” or “Saints Row” using a Logitech Steering Wheel.
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                </td>
+                            </tr>
+                        </tbody></table>
+
+                        <table style="width: 1054px; margin-top: 4px;">
+                            <tbody><tr>
+                                <td style="width: 362px; height: 332px;">
+                                    
+                                    <a target="_blank" href="https://www.x360ce.com/Images/x360ce_General.png"><img src="./Xbox 360 Controller Emulator_files/x360ce_General_Small_2.png" style="width: 362px; height: 332px;"></a>
+                                </td>
+                                <td>
+                                    
+                                    <a target="_blank" href="https://www.x360ce.com/Images/x360ce_LeftThumb.png"><img src="./Xbox 360 Controller Emulator_files/x360ce_LeftThumb_Small_2.png" style="width: 362px; height: 332px; margin-left: 4px;"></a>
+                                </td>
+                                <td rowspan="3" style="background-color: #bfbfbf; padding: 8px; border-radius: 14px; width: 322px; text-align: center;" class="Description">
+                                    
+                                    <p style="text-align: center; font-size: 11px; margin: 0 0 2px 0; color: #888888; text-transform: uppercase;">Controllers and their reviews on Amazon</p>
+
+                                   <table class="ControllerList" style="margin-top: 0;">
+                                       <tbody><tr>
+                                           <td colspan="2"><p class="Manufacturer" style="margin: 6px 6px 0 6px;"><a style="width: 70%; border-radius: 4px 0 0 4px;" title="G920 on Logitech.com" target="_blank" href="http://gaming.logitech.com/en-gb/driving"><span>LOGITECH G920</span></a><a style="width: 30%; border-radius: 0 4px 4px 0;" title="Find on Amazon" target="_blank" href="https://www.amazon.com/s/ref=nb_sb_noss?field-keywords=Logitech+G920+Driving+Force+Wheel&amp;tag=x360cecom-20"><span>Find on Amazon</span></a></p></td>
+                                       </tr>
+                                        <tr>
+                                            <td class="ControllerImg"><a title="G920 on Logitech.com" target="_blank" href="http://gaming.logitech.com/en-gb/driving"><img src="./Xbox 360 Controller Emulator_files/Logitech_G920_Small.jpg" style="width: 107px; height: 80px;"></a></td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <a title="G920 on Logitech.com" target="_blank" href="http://gaming.logitech.com/en-gb/driving">
+                                                <p class="Features" style="padding-top: 2px">Rotation angle adjustable up to 900°</p>
+                                                <p class="Features">Throttle, brake, clutch pedals</p>
+                                                <p class="Features">Dual-motor force feedback</p>
+                                                <p class="Features">D-Pad, Xbox One controller buttons</p>
+                                                </a>
+                                                <p class="Manufacturer" style="border-radius: 4px; margin: 6px 6px 4px 0;"><a style="width: 40%; border-radius: 4px 0 0 4px;" target="_blank" title="Fanatec.com" href="http://www.fanatec.com/"><span>FANATEC</span></a><a style="width: 60%; border-radius: 0 4px 4px 0;" target="_blank" title="Thrustmaster.com" href="http://www.thrustmaster.com/"><span>THRUSTMASTER</span></a></p>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+
+
+
+                                    <table class="ControllerList">
+                                        <tbody><tr>
+                                            <td colspan="2">
+                                                <p class="Manufacturer" style="margin: 6px 6px 0 6px;"><a style="width: 70%; border-radius: 4px 0 0 4px;" title="Xbox One Controller on Microsoft.com" target="_blank" href="http://www.microsoftstore.com/store/msusa/en_US/list/categoryID.70150400?icid=XBOAccessories_ModB1_Controllers_022717"><span>MICROSOFT Xbox One Controller</span></a><a style="width: 30%; border-radius: 0 4px 4px 0;" title="Find on Amazon" target="_blank" href="https://www.amazon.com/s/ref=nb_sb_noss?field-keywords=Microsoft+Xbox+One+Controller+Wireless+Adapter+for+Windows+10&amp;tag=x360cecom-20"><span>Find on Amazon</span></a></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ControllerImg"><a title="Xbox One Controller on Microsoft.com" target="_blank" href="http://www.microsoftstore.com/store/msusa/en_US/list/categoryID.70150400?icid=XBOAccessories_ModB1_Controllers_022717">
+                                                <img src="./Xbox 360 Controller Emulator_files/Microsoft_Xbox_One_Controller_White_Small.jpg" style="width: 106px; height: 80px;"></a></td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <a title="Xbox One Controller on Microsoft.com" target="_blank" href="http://www.microsoftstore.com/store/msusa/en_US/list/categoryID.70150400?icid=XBOAccessories_ModB1_Controllers_022717">
+                                                    <p class="Features" style="padding-top: 2px">Wireless bluetooth controller</p>
+                                                    <p class="Features">Max operating distance 5m</p>
+                                                    <p class="Features">D-Pad, 2 sticks, 2 triggers, 11 buttons</p>
+                                                    <p class="Features">Headset port, vibration feedback</p>
+                                                </a>
+                                                <p class="Manufacturer" style="border-radius: 4px; margin: 6px 6px 4px 0;"><a style="width: 32%; border-radius: 4px 0 0 4px;" target="_blank" title="Steampowered.com" href="http://store.steampowered.com/app/353370/Steam_Controller/"><span>STEAM</span></a><a style="width: 36%; border-radius: 0;" target="_blank" title="Logitech.com" href="https://gaming.logitech.com/en-gb/pc-controllers-gamepads"><span>LOGITECH</span></a><a style="width: 32%; border-radius: 0 4px 4px 0;" target="_blank" title="Playstation.com" href="https://www.playstation.com/en-gb/explore/accessories/dualshock-4-wireless-controller/"><span>SONY</span></a></p>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+
+                                    <table class="ControllerList">
+                                        <tbody><tr>
+                                            <td class="ControllerImg"><a title="Fighterstick USB on CHProducts.com" target="_blank" href="http://www.chproducts.com/Fighterstick-v13-d-722.html"><img src="./Xbox 360 Controller Emulator_files/CH_Fighterstick_USB_Small.jpg" style="width: 64px; height: 80px;"></a></td>
+                                            <td style="text-align: left;">
+                                                <p class="Manufacturer"><a style="width: 53%; border-radius: 4px 0 0 4px;" title="Fighterstick USB on CHProducts.com" target="_blank" href="http://www.chproducts.com/Fighterstick-v13-d-722.html"><span>CH Fighterstick USB</span></a><a style="width: 47%; border-radius: 0 4px 4px 0;" title="Find on Amazon" target="_blank" href="https://www.amazon.com/CH-Products-200-571-Fighterstick-USB/dp/B00006B84X/?tag=x360cecom-20" data-amzn-asin="B00006B84X"><span>Find on Amazon</span></a></p>
+                                                <a title="Fighterstick USB on CHProducts.com" target="_blank" href="http://www.chproducts.com/Fighterstick-v13-d-722.html">
+                                                <p class="Features" style="padding-top: 2px">3 axis, 24 buttons</p>
+                                                <p class="Features">128 programmable functions</p>
+                                                <p class="Features">Side throttle wheel</p>
+                                                <p class="Features">3 modes, mode indicator LEDs on base</p>
+                                                </a>
+                                                <p class="Manufacturer" style="border-radius: 4px; margin: 6px 6px 4px 0;"><a style="width:100%; border-radius: 4px 0 0 4px;" target="_blank" title="VKBControllers.com" href="https://vkbcontrollers.com/"><span>VKB-SIM</span></a></p>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+
+                                    <table class="ControllerList">
+                                        <tbody><tr>
+                                            <td class="ControllerImg"><a title="Pro Throttle USB on CHProducts.com" target="_blank" href="http://www.chproducts.com/Pro-Throttle-v13-d-719.html"><img src="./Xbox 360 Controller Emulator_files/CH_Pro_Throttle_Small.jpg" style="width: 106px; height: 80px;"></a></td>
+                                            <td style="text-align: left;">
+                                                <p class="Manufacturer"><a style="width: 53%; border-radius: 4px 0 0 4px;" title="Pro Throttle USB on CHProducts.com" target="_blank" href="http://www.chproducts.com/Pro-Throttle-v13-d-719.html"><span>CH Pro Throttle USB</span></a><a style="width: 47%; border-radius: 0 4px 4px 0;" title="Find on Amazon" target="_blank" href="https://www.amazon.co.uk/CH-Products-Pro-Throttle-USB/dp/B00006B84Z/?tag=x360cecom-21"><span>Find on Amazon</span></a></p>
+                                                <a title="Pro Throttle USB on CHProducts.com" target="_blank" href="http://www.chproducts.com/Pro-Throttle-v13-d-719.html">
+                                                <p class="Features" style="padding-top: 2px">3 axis, 24 buttons</p>
+                                                <p class="Features">112 programmable functions</p>
+                                                <p class="Features">Left handed, forward-back slide motion</p>
+                                                <p class="Features">3 modes, mode indicator LEDs on base</p>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+
+                                    <table class="ControllerList">
+                                        <tbody><tr>
+                                            <td class="ControllerImg"><a title="Pro Pedals USB on CHProducts.com" target="_blank" href="http://www.chproducts.com/Pro-Pedals-v13-d-716.html"><img src="./Xbox 360 Controller Emulator_files/CH_Pro_Pedals_Small.jpg" style="width: 105px; height: 80px;"></a></td>
+                                            <td style="text-align: left;">
+                                                <p class="Manufacturer"><a style="width: 53%; border-radius: 4px 0 0 4px;" title="Pro Pedals USB on CHProducts.com" target="_blank" href="http://www.chproducts.com/Pro-Pedals-v13-d-716.html"><span>CH Pro Pedals USB</span></a><a style="width: 47%; border-radius: 0 4px 4px 0;" title="Find on Amazon" target="_blank" href="https://www.amazon.com/CH-Products-Pedals-Simulator-300-111/dp/B0000512IE/?tag=x360cecom-20" data-amzn-asin="B0000512IE"><span>Find on Amazon</span></a></p>
+                                                <a title="Pro Pedals USB on CHProducts.com" target="_blank" href="http://www.chproducts.com/Pro-Pedals-v13-d-716.html">
+                                                <p class="Features" style="padding-top: 2px">3 axis of control</p>
+                                                <p class="Features">Differential toe brakes for flight sims</p>
+                                                <p class="Features">Pedal chocks for driving games</p>
+                                                <p class="Features">Large base with 7 foot USB cable</p>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+
+                                    <table class="ControllerList">
+                                        <tbody><tr>
+                                            <td class="ControllerImg"><a title="G700s on Logitech.com" target="_blank" href="http://gaming.logitech.com/en-us/product/g700s-rechargeable-wireless-gaming-mouse"><img src="./Xbox 360 Controller Emulator_files/Logitech_G700s_Small.jpg" style="width: 112px; height: 80px;"></a></td>
+                                            <td style="text-align: left;">
+                                                <p class="Manufacturer"><a style="width: 53%; border-radius: 4px 0 0 4px;" title="G700s on Logitech.com" target="_blank" href="http://gaming.logitech.com/en-us/product/g700s-rechargeable-wireless-gaming-mouse"><span>LOGITECH G700S</span></a><a style="width: 47%; border-radius: 0 4px 4px 0;" title="Find on Amazon" target="_blank" href="https://www.amazon.com/s/ref=nb_sb_noss?field-keywords=Logitech+G700s+prime&amp;tag=x360cecom-20"><span>Find on Amazon</span></a></p>
+                                                <a title="G700s on Logitech.com" target="_blank" href="http://gaming.logitech.com/en-us/product/g700s-rechargeable-wireless-gaming-mouse">
+                                                <p class="Features" style="padding-top: 2px">Wireless or wired (data over cable)</p>
+                                                <p class="Features">13 programmable buttons-controls</p>
+                                                <p class="Features">Gaming-grade laser sensor, 200-8200dpi</p>
+                                                <p class="Features">Dual-mode scroll wheel</p>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+
+                                    <table class="ControllerList">
+                                        <tbody><tr>
+                                            <td class="ControllerImg"><a title="K800 on Logitech.com" target="_blank" href="http://www.logitech.com/en-us/product/wireless-illuminated-keyboard-k800"><img src="./Xbox 360 Controller Emulator_files/Logitech_K800_Small.jpg" style="width: 99px; height: 80px;"></a></td>
+                                            <td style="text-align: left;">
+                                                <p class="Manufacturer"><a style="width: 53%; border-radius: 4px 0 0 4px;" title="K800 on Logitech.com" target="_blank" href="http://www.logitech.com/en-us/product/wireless-illuminated-keyboard-k800"><span>LOGITECH K800</span></a><a style="width: 47%; border-radius: 0 4px 4px 0;" title="Find on Amazon" target="_blank" href="https://www.amazon.com/s/ref=nb_sb_noss?field-keywords=Logitech+K800&amp;tag=x360cecom-20"><span>Find on Amazon</span></a></p>
+                                                <a title="K800 on Logitech.com" target="_blank" href="http://www.logitech.com/en-us/product/wireless-illuminated-keyboard-k800">
+                                                <p class="Features" style="padding-top: 2px">Wireless illuminated keyboard</p>
+                                                <p class="Features">Adjustable backlighting</p>
+                                                <p class="Features">Logitech Unifying receiver</p>
+                                                <p class="Features">Micro-USB charging cable</p>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+
+
+
+                                    
+
+                                    <div style="width: 100%; height: 100px; background-color: #3874ec; border-radius: 8px; overflow: hidden; position: relative; bottom: 0; margin-top: 8px;">
+                                        <a href="https://www.x360ce.com/Redirect/www.jocys.com/Clock/" title="Jocys.com Clock / Alarm for Desktop · Laptop · Tablet" target="_blank" style="position: absolute; top: 0; left: 0; display: block; width: 100%; height: 130px; text-align: center; background-color: transparent;"><img src="./Xbox 360 Controller Emulator_files/JocysCom_ClockForComputer_Banner.png" style="width: 296px; height: 96px; margin-top: 2px;"></a>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr style="height: 0;">
+                                <td colspan="2" style="height: 0; width: 728px; background-image: url(/Images/Google_Adsense_Advertisement.png); background-repeat: no-repeat;">
+                                    <script async="async" src="./Xbox 360 Controller Emulator_files/f(1).txt"></script>
+                                    <!-- AdSense_x360ceCom_728 -->
+                                    <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px; margin-top: 24px; vertical-align: bottom;" data-ad-client="ca-pub-5837808446320006" data-ad-slot="6112012556" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0px;width:728px;height:90px;" src="./Xbox 360 Controller Emulator_files/saved_resource.html"></iframe></ins></ins></ins>
+                                    <script>
+                                        (adsbygoogle = window.adsbygoogle || []).push({});
+                                    </script>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table style="width: 362px; margin: 4px 0 0 0;">
+                                        <tbody><tr>
+                                            <td style="width: 362px; height: 420px; background-color: #ae1919; border-radius: 14px;" class="Games">
+                                                <p style="text-align: center; margin-top: 20px; color: #ff7373;">TOP GAMES IN DATABASE</p>
+                                                
+        <table id="GamesControl_GamesListView_itemPlaceholderContainer">
+
+		
+        <tbody><tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">80,963 - </td>
+            <td>Grand Theft Auto V</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">76,648 - </td>
+            <td>NARUTO SHIPPUDEN: Ultimate Ninja STORM 4</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">71,392 - </td>
+            <td>Need for Speed™ Rivals</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">36,429 - </td>
+            <td>NARUTO STORM 3 FB</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">33,559 - </td>
+            <td>DARK SOULS PREPARE TO DIE EDITION</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">28,870 - </td>
+            <td>Rocket League</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">26,736 - </td>
+            <td>NARUTO STORM REVOLUTION</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">25,870 - </td>
+            <td>Need for Speed™ Payback</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">25,383 - </td>
+            <td>FIFA 18</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">23,064 - </td>
+            <td>EA Sports™ FIFA 15</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">22,999 - </td>
+            <td>The Witcher 3</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">17,239 - </td>
+            <td>StreetFighterV.exe</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">16,940 - </td>
+            <td>FIFA 14</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">16,843 - </td>
+            <td>DARK SOULS™ III</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">13,960 - </td>
+            <td>FIFA 17</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">13,189 - </td>
+            <td>DARK SOULS Ⅱ</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">11,294 - </td>
+            <td>Middle-earth: Shadow of Mordor™</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">11,285 - </td>
+            <td>DARK SOULS (TM) II: Scholar of the First Sin</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">10,852 - </td>
+            <td>Tomb Raider</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">10,690 - </td>
+            <td>Blur.exe</td>
+        </tr>
+    </tbody></table>
+
+    
+
+
+
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                </td>
+                                <td>
+                                  <table style="width: 362px; margin: 4px 4px 0 4px;">
+                                        <tbody><tr>
+                                            <td style="width: 362px; height: 420px; background-color: #34963c; border-radius: 14px;" class="Controllers">
+                                                <p style="text-align: center; margin-top: 20px; color: #84e68c;">TOP CONTROLLERS IN DATABASE</p>
+                                                
+        <table id="ControllersControl_ControllersListView_itemPlaceholderContainer">
+
+		
+        <tbody><tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">493,977 - </td>
+            <td>Generic USB Joystick</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">221,055 - </td>
+            <td>Twin USB Joystick</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">71,207 - </td>
+            <td>XBOX 360 For Windows</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">69,400 - </td>
+            <td>USB JOYSTICK</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">65,562 - </td>
+            <td>USB GAMEPAD</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">51,155 - </td>
+            <td>USB Vibration Joystick (BM)</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">40,995 - </td>
+            <td>Wireless Controller</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">34,776 - </td>
+            <td>Logitech Dual Action</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">33,478 - </td>
+            <td>PLAYSTATION(R)3 Controller</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">26,024 - </td>
+            <td>Bluetooth Gamepad</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">25,897 - </td>
+            <td>Xbox 360 Wireless Receiver for Windows</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">22,163 - </td>
+            <td>Logitech RumblePad 2 USB</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">19,043 - </td>
+            <td>XBOX One For Windows</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">16,969 - </td>
+            <td>Logitech Cordless RumblePad 2</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">16,283 - </td>
+            <td>PC Game Controller</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">12,519 - </td>
+            <td>PS(R) Gamepad</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">12,096 - </td>
+            <td>vJoy Device</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">10,254 - </td>
+            <td>VJoy Virtual Joystick</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">9,120 - </td>
+            <td>Thrustmaster dual analog 3.2</td>
+        </tr>
+    
+		
+        <tr>
+            <td style="padding-right: 4px; text-align: right; white-space: nowrap">8,315 - </td>
+            <td>Gamepad f310</td>
+        </tr>
+    </tbody></table>
+
+    
+
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                </td>
+                            </tr>
+                        </tbody></table>
+
+                        <table style="width: 1054px; margin-top: 4px;">
+                            <tbody><tr>
+                                <td style="background-color: #ffbf00; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px; color: #111111; text-align: center; border-radius: 14px;">
+                                    <img id="ControllersChartControl1_Chart1" borderdashstyle="Solid" src="./Xbox 360 Controller Emulator_files/ChartImg.axd" alt="" style="height:296px;width:774px;border-width:0px;">
+                                </td>
+                            </tr>
+                        </tbody></table>
+
+                        <table style="width: 1054px; margin-top: 4px;">
+                            <tbody><tr>
+                                <td class="Description" style="background-color: #ffbf00; padding: 20px; color: #111111; text-align: justify; border-radius: 14px;">
+
+                                    <p style="margin-top: 0;"><span class="title">System Requirements</span></p>
+
+                                    <p style="margin-left: 20px;">• Windows Vista or newer.<br>
+                                        • <a target="_blank" class="Blue" href="http://www.microsoft.com/en-us/download/details.aspx?id=22">.NET 3.5 (includes 2.0 and 3.0)</a> - included in Windows 7.<br>
+                                        <span style="margin-left: 14px; font-size: 9pt;"><i>In Windows 8 and 10: <a class="Blue" target="_blank" href="http://msdn.microsoft.com/en-us/library/hh506443.aspx">Control Panel &gt; Programs and Features &gt; Turn Windows features on or off &gt; enable “.NET Framework 3.5 (includes 2.0 and 3.0)”</a>.</i></span><br>
+                                        • <a target="_blank" class="Blue" href="http://www.microsoft.com/en-us/download/details.aspx?id=48130">.NET 4.6 (includes 4.0)</a> - included in Windows 8 and 10.<br>
+                                        • <a target="_blank" class="Blue" href="http://www.microsoft.com/en-us/download/details.aspx?id=8109">DirectX End-User Runtime (June 2010)</a> - Required regardless of OS; <span style="font-size: 9pt;"><i>.NET MUST be installed prior to the DirectX update.</i></span><br>
+                                        • <a target="_blank" class="Blue" href="http://www.microsoft.com/en-us/download/details.aspx?id=40784">Visual C++ Redistributable for Visual Studio 2013</a> - For x64 systems install both x86 and x64 redistributables.</p>
+
+                                    <p><span class="title">Files</span></p>
+
+                                    <p style="margin-left: 20px;">• xinput1_3.dll (Library) - Translates XInput calls to DirectInput calls - supports old, non-XInput compatible GamePads.<br>
+                                        • x360ce.exe - (Application) - Allows for editing and testing of Library settings.<br>
+                                        • x360ce.ini - (Configuration) - Contain Library settings (button, axis, slider maps).<br>
+                                        • x360ce.gdb - (Game Database) Includes required hookmasks for various games).<br>
+                                        • Dinput8.dll - (DirectInput 8 spoof/wrapping file to improve x360ce compatibility in rare cases).</p>
+
+                                    <p><span class="title">Installation</span></p>
+
+                                    <p>Run this program from the same directory as the game executable. XInput library files exist with several different names and some games require a change in its name. Known names:</p>
+
+                                    <p style="margin-left: 20px;">• xinput1_4.dll<br>
+                                        • xinput1_3.dll<br>
+                                        • xinput1_2.dll<br>
+                                        • xinput1_1.dll<br>
+                                        • xinput9_1_0.dll</p>
+
+                                    <p><span class="title">Uninstallation</span></p>
+                                    <p>Delete x360ce.exe, x360ce.ini and all XInput DLLs from the game's executable directory.</p>
+                                    <p><span class="title">Troubleshooting</span></p>
+                                    <p>Some games have control issues, when Dead Zone is reduced to 0%.</p>
+                                    <p>You may need to increase the Anti-Dead Zone value, if there is gap between the moment, when you start to push the axis related button, and the reaction in game.</p>
+                                    <p>Some controllers will only operate in game, if they are set as “GamePad”. Try to:</p>
+
+                                    <p style="margin-left: 20px;">1. Run x360ce.exe<br>
+                                        2. Select [Controller #] tab page with your controller.<br>
+                                        3. Open [Advanced] tab page.<br>
+                                        4. Set "Device Type" drop down list value to: GamePad.<br>
+                                        5. Click [Save] button.<br>
+                                        6. Close x360ce Application, run game.</p>
+
+                                    <p>Only one controller, mapped to PAD1, may work correctly in some games. Try to:</p>
+
+                                    <p style="margin-left: 20px;">1. Run x360ce.exe<br>
+                                        2. Select the [Controller #] tab page corresponding to your controller.<br>
+                                        3. Open the [Direct Input Device] tab page (visible when the controller is connected).<br>
+                                        4. Set "Map To" drop down list value to: 1.<br>
+                                        5. Set "Map To" drop down list values <i>(repeat steps 2. to 4.)</i> for other controllers, if you have them, to: 2, 3 or 4.<br>
+                                        6. Click [Save] button.<br>
+                                        7. Close x360ce Application, run game.</p>
+
+                                    <p>To use more than one controller in game, you may need to combine them. Try to:</p>
+
+                                    <p style="margin-left: 20px;">1. Run x360ce.exe<br>
+                                        2. Select the [Controller #] tab page corresponding to your additional controller.<br>
+                                        3. Open the [Advanced] tab page.<br>
+                                        4. Set "Combine Into" drop down list value to: One.<br>
+                                        5. Select [Options] tab page.<br>
+                                        6. Check "Enable Combining" check-box. <span style="font-size: 9pt;"><i>(Note: Uncheck "Enable Combining" check-box, when you want to configure the controller.)</i></span><br>
+                                        7. Click [Save] button.<br>
+                                        8. Close x360ce Application, run game.</p>
+
+                                    <p>The x360ce.exe application can be closed before launching the game; the game doesn't need it and it uses your computer's resources. The x360ce.exe application is just a GUI for editing x360ce.ini and testing your controller.</p>
+
+                                    <p>If [Controller #] tab page light won't turn green / Red light on [Controller #] tab page:</p>
+
+                                    <p style="margin-left: 20px;">• The controller profile loaded may match the name of your controller, but not actually be for the controller you own.<br>
+                                        • There just might not be a profile for your control at all. The light should turn green once the 2 sticks, triggers and D-pad are assigned. Sometimes x360ce.exe application needs to be restarted, after assigning these, for the light to turn green.<br>
+                                        • The controller profile might have PassThrough (check-box) enabled.<br>
+                                        • The DInput state of the controller might be incorrect due to an application crashing previously and not unloading the controller or some other reason. Opening up Joy.cpl (Set Up USB Game Controllers) and clicking the [Advanced] button, and then Okaying out of the window, that appears, can fix it.<br>
+                                    </p>
+
+                                    <p>If you have questions about installation or configuration, please go to our <a target="_blank" class="Blue" href="http://ngemu.com/forums/x360ce.140">NGemu x360ce forum</a></p>
+                                </td>
+                            </tr>
+                        </tbody></table>
+
+                        
+
+                                    <p id="AdvertisingDisclosureShort" style="text-align: center; font-size: 11px; margin: 4px 0px 0 0px; color: #3ea5c6; cursor: pointer;" onclick="this.style.display=&#39;none&#39;; document.getElementById(&#39;AdvertisingDisclosure&#39;).style.display=&#39;block&#39;" ;="">The owner of this website is a participant in the Amazon EU Associates and Amazon Services LLC Associates Program...</p>
+                                    <p onclick="this.style.display=&#39;none&#39;; document.getElementById(&#39;AdvertisingDisclosureShort&#39;).style.display=&#39;block&#39;" id="AdvertisingDisclosure" style="cursor: pointer; text-align: justify; font-size: 11px; margin: 4px 14px 0 14px; color: #3ea5c6; display: none;">The owner of this website is a participant in the Amazon EU Associates and Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com / Amazon.co.uk / Amazon.ca / Amazon.de / Amazon.it / Amazon.fr / Amazon.es</p>
+
+
+
+                    </td>
+                </tr>
+            </tbody></table>
+
+
+        </form>
+
+    </div>
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0px;width:0px;height:0px;" src="./Xbox 360 Controller Emulator_files/saved_resource(1).html"></iframe></ins></ins></ins><script src="./Xbox 360 Controller Emulator_files/onejs"></script><div id="amzn_assoc_ad_div_adunit_0"></div>
+
+<!-- <script type="text/javascript" src="//s.skimresources.com/js/115507X1574706.skimlinks.js"></script> -->
+
+
+
+
+<iframe id="google_osd_static_frame_132693569430" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./Xbox 360 Controller Emulator_files/saved_resource(2).html"></iframe></body><iframe id="google_shimpl" style="display: none;" src="./Xbox 360 Controller Emulator_files/saved_resource(3).html"></iframe><iframe id="google_esf" name="google_esf" src="./Xbox 360 Controller Emulator_files/zrt_lookup.html" data-ad-client="ca-pub-5837808446320006" style="display: none;"></iframe></html>

@@ -10,13 +10,13 @@ MONTANT CONSOMMATION                           12
 MONTANT HORS TAXE                              12
 digits(nufmmr)                                 12
 MONTANT SURTAXE                                12
-CONTRIBUT° ELEC/RURALE                          8
+CONTRIBUTï¿½ ELEC/RURALE                          8
 MONTANT TTC                                    12
 NET A PAYER                                    12
 TYPE PIECE CONSOM.                              2
 TAUX TVA                                        5
 MONTANT TVA                                    12
-Conso facturée                                 10
+Conso facturï¿½e                                 10
 NBRE JOURS CONSO                                3
 ANCIEN INDEX                                   10
 NOUVEL INDEX                                   10

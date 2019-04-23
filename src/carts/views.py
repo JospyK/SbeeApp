@@ -38,7 +38,6 @@ def update(request):
 
 @login_required()
 def page(request):
-	print("ok")
 	cart_obj, cart_created = Cart.objects.new_or_get(request)
 	order_obj = None
 	if cart_created or cart_obj.factures.count() == 0:
@@ -59,11 +58,13 @@ def page(request):
 
 @login_required()
 def checkout(request):
-	print("ok")
 	cart_obj, cart_created = Cart.objects.new_or_get(request)
 	order_obj = None
 	if cart_created or cart_obj.factures.count() == 0:
 		return redirect("cart:home")
+
+	print(cart_obj.factures)
+
 
 	billing_profile, billing_guest_profile_created = BillingProfile.objects.new_or_get(request)
 
